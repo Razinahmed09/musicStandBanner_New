@@ -1,0 +1,2425 @@
+<!doctype html>
+<html dir="ltr" class="no-js translate-eng" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Best Auto Salon</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="{{ asset('assets/user/img/best.png') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/1.0.10/jsrender.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset('assets/user/css/plugins.min.css') }}">
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="{{ asset('assets/user/css/web_chat.css') }}">
+    <link rel="stylesheet" href="./css/main.css" class="css">
+
+    <!-- Include flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('theme-assets/css/emojionearea.min.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.tmpl@0.0.2/index.min.js"></script>
+    <!-- Include flatpickr JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    <!-- Google Tag Manager Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVWP5ERGNL"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-KVWP5ERGNL'); </script>
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css" rel="stylesheet">
+
+<!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.js"></script>
+    
+    <style>
+        .skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0% !important;
+        }
+
+        .VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
+            display: none !important;
+        }
+
+        .date-marker {
+            background-color: green !important;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 2px;
+        }
+
+        .flatpickr-day.flatpickr-disabled,
+        .flatpickr-day.flatpickr-disabled:hover {
+            color: red;
+        }
+
+        .flatpickr-day.flatpickr-disabled.active {
+    background: rgba(128, 128, 128, 0.5); /* Light gray with 50% opacity */
+    box-shadow: none;
+    color: #fff; /* Text color remains white */
+    border-color: rgba(128, 128, 128, 0.5); /* Light gray border with 50% opacity */
+    font-size: 9px;
+}
+
+ .flatpickr-day.flatpickr-disabled.not_available {
+            background: #dc143c; /* Crimson Red */
+box-shadow: none;
+color: #fff;
+border-color: #dc143c;
+font-size: 9px;
+}
+
+        #chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10000;
+            transition: background-color 0.3s;
+        }
+
+        #chat-button:hover {
+            background-color: #0056b3;
+        }
+        .hero-section {
+    padding: 0px !important; 
+ 
+}
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <section class="top-header">
+        <div class="container" >
+
+        
+        <div class="row top-row">
+
+            <div class="col-md-2">
+                <div class="top-email-div">
+                    <div class="nav-icon" >
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="icon-text-con" >
+                      <a href="mailto:hello@badge-design.co.uk">
+                        <p>hello@badge-design.co.uk</p>
+                      </a>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-2">
+                    <div class="top-email-div">
+                        <div class="nav-icon" >
+                          <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="icon-text-con" >
+                          <a href="https://www.facebook.com/">
+                            <p>Badge Design.fac</p>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                            <div class="top-email-div">
+                                <div class="nav-icon" >
+                                  <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <div class="icon-text-con" >
+                                  <a href="https://www.instagram.com/">
+                                    <p>Bestauto.inst</p>
+                                  </a>
+                                </div>
+                             </div>
+               </div>
+               <div class="col-md-2">
+                <div class="top-email-div">
+                    <div class="nav-icon" >
+                      <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                    <div class="icon-text-con" >
+                      <a href="https://www.instagram.com/">
+                        <p>Bestauto.X</p>
+                      </a>
+                    </div>
+                 </div>
+
+
+
+
+   </div>
+               <div class="col-md-3">
+            <div class="top-button">
+            
+                <button>APPOINTMENT <span><i class="fa-solid fa-chevron-right"></i></span></button>
+            </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <section class="header-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mid-header-div">
+                        <p>Book your appointments for 5-9 Year Warranty Programs reported to CARFAX & honored by insurance companies ! ! 48 - 72 hour turnaround ! ! !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<header>
+    
+  <nav class="navbar navbar-expand-lg navbar-light main-menu" id="slide-nav">
+    <div class="container" id="dropdown-set">
+      <a class="navbar-brand" href="#"><img src="./top-logo-main 1.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-menu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown" id="services-dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false">
+                Services
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">WHY CHOOSE US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">CUSTOMER RIDES GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">SELF HEALING</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CERAMICS COATING BRANDS
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html" tabindex="-1" aria-disabled="true">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+        <div id="hidden-content-nav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="hidden-slide">
+            <li><a class="nav-hidden-item" href="{{route('user.exterior-protection')}}">Exterior Protection</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.interior-protection')}}">Interior Protection</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.maintainance')}}">Maintenance</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.brand-new-vehicles')}}">Brand New Vehicles</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.motorcycles')}}">Motorcycles</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.collision-repair')}}">Collision Repair</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.apparel')}}">Apparel</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.deionizer-system')}}">Deionizer System</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.classic-street-rods')}}">Classic Street Rods</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.touch-up-process')}}">Touch Up Process</a></li>
+            <li><a class="nav-hidden-item" href="{{route('user.our-products')}}">Our Products</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    </div>
+</header>
+
+  
+
+   
+    <main id="main-main">
+
+
+<section class="hero-section" >
+    <!-- YouTube iframe -->
+
+    <div class="top-header-video">
+       <iframe class="background-video" 
+          src="https://www.youtube.com/embed/h1dinuofrSg?autoplay=1&controls=0&modestbranding=1&showinfo=0&rel=0&mute=1&loop=1&playlist=h1dinuofrSg" 
+          frameborder="0" allow="autoplay; encrypted-media" loop=1 referrerpolicy="strict-origin-when-cross-origin" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+      </iframe>
+       
+    </div>
+    <video autoplay muted loop class="background-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        <source src='{{ asset("$homepage->top_video") }}' type="video/mp4">
+    </video>
+    <!-- Content over video -->
+    <div class="container top-video-para">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hero-text">
+                    <h1>COMPLETE <br> Automotive Protection</h1>
+                    <p>Ceramic Coatings And Paint Protection Films</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact-section ">
+    <div class="Heading-carousel-contact">
+        <div class="carousel-track-heading">
+            <div class="heading-set"><h1>Contact Us</h1></div>
+            <div class="heading-set"><h1>Contact Us</h1></div>
+            <div class="heading-set"><h1>Contact Us</h1></div>
+            <div class="heading-set"><h1>Contact Us</h1></div>
+            <div class="heading-set"><h1>Contact Us</h1></div>
+            <div class="heading-set"><h1>Contact Us</h1></div>
+            <div class="heading-set"><h1>Contact Us</h1></div>
+            <div class="heading-set"><h1>Contact Us</h1></div>
+            <div class="heading-set"><h1>Contact Us</h1></div>
+            <div class="heading-set"><h1>Contact Us</h1></div>
+        </div>
+    </div>
+    <div class="row col-md-12">
+        <div class="col-md-5">
+        </div>
+        <div class="col-md-7 z-index">
+            <div class="container contact-set">
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+<form action="{{ route('user.submit-appointment') }}" method="POST" id="submitAppointmentForm" autocomplete="off" >
+ 
+    <div class="row">
+    <div class="col-md-6">
+        <div class="input-half">
+            <label for="">Name</label>
+            <input type="text"  name="fullname" id="name"
+              placeholder="Full Name" value="{{old('fullname')}}" required autocomplete="off" >
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="input-half">
+            <label for="">Email Address</label> 
+            <input type="email" name="email" placeholder="Email Address" value="{{old('email')}}" required autocomplete="off">
+        </div>
+    </div>
+</div>
+    <div class="col-md-12">
+        <div class="input-half">
+            <label for="">Phone Number</label> 
+            <input type="text" name="phone" id="phone"
+                                        placeholder="Phone" value="{{old('phone')}}" required autocomplete="off" >
+        </div>
+    </div>
+        <div class="col-md-12">
+            <div class="input-half">
+                <label for="">Year, Make And Model</label> 
+                <input type="text" name="model" id="year-make-modal"
+                                        placeholder="Year, Make And Model" value="{{old('model')}}" required>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="input-half">
+                <label for="">Reason for the request?</label> 
+                <textarea name="message" id="" autocomplete="off" ></textarea>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="input-half">
+                <p class="label-para" >All requests are booked on appointments only</p>
+            </div>
+        </div>
+            
+                                    <div class="alert alert-success">
+                                        {{ session('success') }}
+                                    </div>
+                                
+                               
+                                    <div class="alert alert-danger">
+                                        {{ session('error') }}
+                                    </div>
+                               
+        <div class="g-recaptcha" data-sitekey="6LcC2o0qAAAAANdcsC2PrfWUH2p5W_RUzCe_dbat"></div>
+        <div class="form-btn">
+            <button type="submit">Request A Quote</button>
+        </div>
+
+</form>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="service-section">
+    <div class="Heading-carousel">
+        <div class="carousel-track-heading">
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <div class="heading-set"><h1>Our Services</h1></div>
+            <!-- Duplicate logos to ensure the infinite scroll appears seamless -->
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="service-text">
+                <h3>OUR SERVICES</h3>
+                <div class="heding-image" >
+                    <div><img src="./Assests/Line 13.png" alt="line">
+                    </div>
+                    <div><img src="./Assests/Line 13.png" alt="line">
+                    </div>
+                    <div><img src="./Assests/Line 13.png" alt="line">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row service-row">
+      <div class="service-con" >
+        
+            <div class="col-md-4">
+                <a href="#" >
+                    <div class="service-para">
+                        <div class="service-first">
+                            <img src="./Assests/Mask group-1.png" alt="">
+                        </div>
+                        <div class="serv-img">
+                            <!-- <img src="{{asset('Assests/Rectangle 16.png')}}" alt=""> -->
+                            <p>Exterior Protection</p>
+                            <a href="#" class="readmore-btn" >Read More <i class="fa-solid fa-caret-right"></i></a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+        <div class="col-md-4">
+            <a href="#" >
+                <div class="service-para">
+                
+                    <div class="service-first">
+                        <img src="./Assests/Mask group-1.png" alt="">
+                    </div>
+                    <div class="serv-img">
+                        <!--<img src="{{asset('Assests/Rectangle 16.png')}}" alt=""> -->
+                        <p>interior Protection</p>
+                        <a href="#" class="readmore-btn" >Read More <i class="fa-solid fa-caret-right"></i></a>
+                    </div>
+                
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="#" >
+                <div class="service-para">
+                    <div class="service-first">
+                        <img src="./Assests/Mask group-1.png" alt="">
+                    </div>
+                    <div class="serv-img">
+                        <!-- <img src="./Rectangle 16.png" alt=""> -->
+                        <p>Refinish Brake Calipers</p>
+                        <a href="#" class="readmore-btn" >Read More <i class="fa-solid fa-caret-right"></i></a >
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="#" >
+                <div class="service-para">
+                    <div class="service-first">
+                        <img src="./Assests/Mask group-1.png" alt="">
+                    </div>
+                    <div class="serv-img">
+                        <!-- <img src="./Rectangle 16.png" alt=""> -->
+                        <p>MAINTENANCE</p>
+                        <a href="#" class="readmore-btn" >Read More <i class="fa-solid fa-caret-right"></i></a>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="#" >
+                <div class="service-para">
+                    <div class="service-first">
+                        <img src="./Assests/Mask group-1.png" alt="">
+                    </div>
+                    <div class="serv-img">
+                        <!--<img src="./Rectangle 16.png" alt="">-->
+                        <p>APPAREL</p>
+                        <a href="#" class="readmore-btn" >Read More <i class="fa-solid fa-caret-right"></i></a>
+                    </div>
+                </div>
+            </a>
+        </div>
+      </div>
+    </div>
+
+
+
+</div>
+<!-- <div class="slider-set">
+    <div class="slidcontain" id="carousel1">
+      <div class="slider-row">
+        <div class="slide-item">
+          <div class="slide-para">
+            <h4>Ceramic Coating Brands</h4>
+            <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+          </div>
+        </div>
+        <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+       
+      </div>
+    </div>
+  
+    <div class="slidcontain slidtwo" id="carousel2">
+      <div class="slider-row">
+        <div class="slide-item">
+          <div class="slide-para">
+            <h4>Ceramic Coating Brands</h4>
+            <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+          </div>
+        </div>
+        <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-para">
+              <h4>Ceramic Coating Brands</h4>
+              <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div> -->
+  
+<div class="logo-carousel">
+
+    <div class="carousel-track">
+    
+
+        <div class="logo-set">
+            <img src="./Assests/logo1 1.png" alt="Logo">
+        </div>
+
+
+          
+        
+        <!-- Duplicate logos to ensure the infinite scroll appears seamless -->
+        <div class="logo-set"> <a href="#"> <img src="./Assests/badge-img/logos/logo 1.jpg" alt="Logo-1"></a></div>
+        <div class="logo-set"> <a href="#"> <img src="./Assests/badge-img/logos/logo 2.jpg" alt="Logo-2"> </a> </div>
+        <div class="logo-set"> <a href="#"> <img src="./Assests/badge-img/logos/logo 3.jpg" alt="Logo-3"> </a> </div>
+        <div class="logo-set"> <a href="#"> <img src="./Assests/badge-img/logos/logo 4.jpg" alt="Logo-4"></a> </div>
+
+        <div class="logo-set"> <a href="https://www.feynlab.com/"> <img src="./Assests/badge-img/logos/logo 5.jpg" alt="Logo-1"></a></div>
+        <div class="logo-set"> <a href="https://ceramicpro.com/"> <img src="./Assests/badge-img/logos/logo 6.jpg" alt="Logo-2"> </a> </div>
+        <div class="logo-set"> <a href="https://gtechniq.com/"> <img src="./Assests/badge-img/logos/logo 7.jpg" alt="Logo-3"> </a> </div>
+        <div class="logo-set"> <a href="https://iglcoatings.com/"> <img src="./Assests/badge-img/logos/logo 8.jpg" alt="Logo-4"></a> </div>
+
+        <div class="logo-set"> <a href="https://www.feynlab.com/"> <img src="./Assests/badge-img/logos/logo 9.jpg" alt="Logo-1"></a></div>
+        <div class="logo-set"> <a href="https://ceramicpro.com/"> <img src="./Assests/badge-img/logos/logo 10.jpg" alt="Logo-2"> </a> </div>
+        <div class="logo-set"> <a href="https://gtechniq.com/"> <img src="./Assests/badge-img/logos/logo 12.jpg" alt="Logo-3"> </a> </div>
+        <div class="logo-set"> <a href="https://iglcoatings.com/"> <img src="./Assests/badge-img/logos/logo 13.jpg" alt="Logo-4"></a></div>
+
+        <div class="logo-set"> <a href="https://www.feynlab.com/"> <img src="./Assests/badge-img/logos/logo 14.jpg" alt="Logo-1"></a></div>
+        <!-- <div class="logo-set"> <a href="https://ceramicpro.com/"> <img src="./Assests/badge-img/logos/logo.jpg" alt="Logo-2"> </a> </div>
+        <div class="logo-set"> <a href="https://gtechniq.com/"> <img src="{{ asset('Assests/g-techniq 1.png') }}" alt="Logo-3"> </a> </div>
+        <div class="logo-set"> <a href="https://iglcoatings.com/"> <img src="{{ asset('Assests/logo3 2.png') }}" alt="Logo-4"></a></div> -->
+        
+        <!-- <div class="logo-set"> <a href="https://www.feynlab.com/"> <img src="{{ asset('Assests/logo1 1.png') }}" alt="Logo-1"></a></div>
+        <div class="logo-set"> <a href="https://ceramicpro.com/"> <img src="{{ asset('Assests/logo2 1.png') }}" alt="Logo-2"> </a> </div>
+        <div class="logo-set"> <a href="https://gtechniq.com/"> <img src="{{ asset('Assests/g-techniq 1.png') }}" alt="Logo-3"> </a> </div>
+        <div class="logo-set"> <a href="https://iglcoatings.com/"> <img src="{{ asset('Assests/logo3 2.png') }}" alt="Logo-4"></a></div>
+
+        <div class="logo-set"> <a href="https://www.feynlab.com/"> <img src="{{ asset('Assests/logo1 1.png') }}" alt="Logo-1"></a></div>
+        <div class="logo-set"> <a href="https://ceramicpro.com/"> <img src="{{ asset('Assests/logo2 1.png') }}" alt="Logo-2"> </a> </div>
+        <div class="logo-set"> <a href="https://gtechniq.com/"> <img src="{{ asset('Assests/g-techniq 1.png') }}" alt="Logo-3"> </a> </div>
+        <div class="logo-set"> <a href="https://iglcoatings.com/"> <img src="{{ asset('Assests/logo3 2.png') }}" alt="Logo-4"></a></div> -->
+    </div>
+</div>
+
+
+</section>
+
+<!-- <section class="Benefits-section">
+//     <div class="Heading-carousel-contact">
+//         <div class="carousel-track-heading">
+//             <div class="heading-set"><h1>Benefits</h1></div>
+//             <div class="heading-set"><h1>Benefits</h1></div>
+//             <div class="heading-set"><h1>Benefits</h1></div>
+//             <div class="heading-set"><h1>Benefits</h1></div>
+//             <div class="heading-set"><h1>Benefits</h1></div>
+//             <div class="heading-set"><h1>Benefits</h1></div>
+//             <div class="heading-set"><h1>Benefits</h1></div>
+//             <div class="heading-set"><h1>Benefits</h1></div>
+//             <div class="heading-set"><h1>Benefits</h1></div>
+//             <div class="heading-set"><h1>Benefits</h1></div>
+            
+//         </div>
+//     </div>
+    
+//     <div class="heading-container">
+//         <h1>{{ $homepage->benefits_title }}</h1>
+//         <div class="heding-image">
+//             <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+//             <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+//             <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+//         </div>
+//     </div>
+    
+//     <div class="benefits-sec">
+//         <div class="Benefits-sub-section">
+//             <div class="benefits-row">
+//                 <div class="banefits-image">
+//                     <img src="{{ asset($homepage->benefits_box1_img)}}" alt="Car-Image">
+//                 </div>
+//                 <div class="para-set">
+//                     <div class="benefits-para">
+//                         <div>
+//                             <div class="hidden-con">
+//                                 <p style="font-family: 'Mina', sans-serif; font-weight: bold;">{{ $homepage->benefits_box1_title }}</p>
+                                
+//                             </div>
+//                             <div class="hidden-para">
+//                                 <p id="hidden-p" style="font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 500; color: #fff; letter-spacing: 0px;">{{ $homepage->benefits_box1_desc }}</p>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             <div class="benefits-row">
+//                 <div class="banefits-image">
+//                     <img src="{{ asset($homepage->benefits_box2_img) }}" alt="Car-Image">
+//                 </div>
+//                 <div class="para-set">
+//                     <div class="benefits-para">
+//                         <div>
+//                             <div class="hidden-con">
+//                                 <p>Your Text Here</p>
+                                
+//                             </div>
+//                             <div class="hidden-para">
+//                                 <p id="hidden-p" style="font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 500; color: #fff; letter-spacing: 0px;">Your Text Here</p>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             <div class="benefits-row">
+//                 <div class="banefits-image">
+//                     <img src="{{ asset($homepage->benefits_box3_img) }}" alt="Car-Image">
+//                 </div>
+//                 <div class="para-set">
+//                     <div class="benefits-para">
+//                         <div>
+//                             <div class="hidden-con">
+//                                 <p>Your Text Here</p>
+                                
+//                             </div>
+//                             <div class="hidden-para">
+//                                 <p id="hidden-p" style="font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 500; color: #fff; letter-spacing: 0px;">Your Text Here</p>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             <div class="benefits-row">
+//                 <div class="banefits-image">
+//                     <img src="{{ asset($homepage->benefits_box4_img) }}" alt="Car-Image">
+//                 </div>
+//                 <div class="para-set">
+//                     <div class="benefits-para">
+//                         <div>
+//                             <div class="hidden-con">
+//                                 <p>Your Text Here</p>
+                               
+//                             </div>
+//                             <div class="hidden-para">
+//                                 <p id="hidden-p" style="font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 500; color: #fff; letter-spacing: 0px;">Your Text Here</p>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             <div class="benefits-row">
+//                 <div class="banefits-image">
+//                     <img src="{{ asset($homepage->benefits_box5_img) }}" alt="Car-Image">
+//                 </div>
+//                 <div class="para-set">
+//                     <div class="benefits-para">
+//                         <div>
+//                             <div class="hidden-con">
+//                                 <p>Your Text Here</p>
+                                
+//                             </div>
+//                             <div class="hidden-para">
+//                                 <p id="hidden-p" style="font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 500; color: #fff; letter-spacing: 0px;">Your Text Here</p>
+//                             </div>   
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//         </div>
+//     </div>
+</section> -->
+
+<section class="Benefits-section" >
+  <div class="Heading-carousel-contact">
+      <div class="carousel-track-heading">
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <div class="heading-set"><h1>Benefits</h1></div>
+          <!-- Duplicate logos to ensure the infinite scroll appears seamless -->
+          
+      </div>
+  </div>
+  <div class="heading-container" > 
+      <h1>BENEFITS</h1> 
+      <div class="heding-image" >
+          <div><img src="./Assests/Line 13.png" alt="line">
+          </div>
+          <div><img src="./Assests/Line 13.png" alt="line">
+          </div>
+          <div><img src="./Assests/Line 13.png" alt="line">
+          </div>
+      </div>
+  </div>
+  <div class="benefits-sec02" >
+  <div class="Benefits-sub-section" > 
+      <div class="benefits-row02" >    
+          <div class="banefits-image02" >
+              
+              <img src="{{ asset($homepage->benefits_box1_img)}}" id="banefits-image-img02" alt="Car-Image">
+              
+          </div>
+          <div class="para-set01" >
+              <div class="benefits-para02">
+                  <div >
+                      <div class="hidden-con02" >
+                      <p >Your Text Here</p>
+                      <!-- <span class="arrow-con">
+                          <img src="./Assests/Vector 4.png" alt="vector">
+                          <img src="./Assests/Vector 4.png" alt="vector">
+                          <img src="./Assests/Vector 4.png" alt="vector">
+                      </span> -->
+                  </div>
+              
+                      <div class="hidden-para02">
+                          <p id="hidden-p02">Your Text Here</p>
+                      </div>
+                      
+                  </div>
+              </div>
+          
+      
+  </div>
+      </div>
+<div class="benefits-row02" >    
+  <div class="banefits-image02" >
+      <img src="{{ asset($homepage->benefits_box2_img) }}" id="banefits-image-img02" alt="Car-Image">
+  </div>
+  <div class="para-set01" >
+      <div class="benefits-para02">
+          <div >
+              <div class="hidden-con02" >
+              <p>Your Text Here</p>
+              <!-- <span class="arrow-con">
+                  <img src="./Assests/Vector 4.png" alt="vector">
+                  <img src="./Assests/Vector 4.png" alt="vector">
+                  <img src="./Assests/Vector 4.png" alt="vector">
+              </span> -->
+          </div>
+      
+              <div class="hidden-para02">
+                  <p id="hidden-p02">Your Text Here</p>
+              </div>
+              
+          </div>
+      </div>
+  
+
+</div>
+</div>
+<div class="benefits-row02" >    
+  <div class="banefits-image02" >
+      <img src="{{ asset($homepage->benefits_box3_img) }}" id="banefits-image-img02" alt="Car-Image">
+  </div>
+  <div class="para-set01" >
+      <div class="benefits-para02">
+          <div >
+              <div class="hidden-con02" >
+              <p>Your Text Here</p>
+              <!-- <span class="arrow-con">
+                  <img src="./Assests/Vector 4.png" alt="vector">
+                  <img src="./Assests/Vector 4.png" alt="vector">
+                  <img src="./Assests/Vector 4.png" alt="vector">
+              </span> -->
+          </div>
+      
+              <div class="hidden-para02">
+                  <p id="hidden-p02">Your Text Here</p>
+              </div>
+              
+          </div>
+      </div>
+  
+
+</div>
+</div>
+   
+   
+      
+      <div class="benefits-row02" >    
+          <div class="banefits-image02" >
+              <img src="{{ asset($homepage->benefits_box4_img) }}" id="banefits-image-img02" alt="Car-Image">
+          </div>
+          <div class="para-set01" >
+              <div class="benefits-para02">
+                  <div >
+                      <div class="hidden-con02" >
+                      <p>Your Text Here</p>
+                      <!-- <span class="arrow-con">
+                          <img src="./Assests/Vector 4.png" alt="vector">
+                          <img src="./Assests/Vector 4.png" alt="vector">
+                          <img src="./Assests/Vector 4.png" alt="vector">
+                      </span> -->
+                  </div>
+              
+                      <div class="hidden-para02">
+                          <p id="hidden-p02">Your Text Here</p>
+                      </div>
+                      
+                  </div>
+              </div>
+          
+      
+  </div>
+
+      </div>
+      <div class="benefits-row02" >    
+          <div class="banefits-image02" >
+              <img src="{{ asset($homepage->benefits_box5_img) }}" id="banefits-image-img02"  alt="Car-Image">
+          </div>
+          <div class="para-set01" >
+              <div class="benefits-para02">
+                  <div >
+                      <div class="hidden-con02" >
+                      <p>Your Text Here</p>
+                      <!-- <span class="arrow-con">
+                          <img src="./Assests/Vector 4.png" alt="vector">
+                          <img src="./Assests/Vector 4.png" alt="vector">
+                          <img src="./Assests/Vector 4.png" alt="vector">
+                      </span> -->
+                  </div>
+              
+                      <div class="hidden-para02">
+                          <p id="hidden-p02">Your Text Here</p>
+                      </div>
+                      
+                  </div>
+              </div>
+  </div>
+      </div>
+      
+  </div>
+
+  
+  <!-- <div class="benefit-bottom-con" >
+      <p>These arrows will be animated from low to high visibility. When clicked, the full information will appear below.</p>
+  </div> -->
+</section>
+
+<section class="Gallery-section" >
+    <div class="Heading-carousel-contact">
+        <div class="carousel-track-heading">
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <div class="heading-set"><h1>CUSTOMERS GALLERY</h1></div>
+            <!-- Duplicate logos to ensure the infinite scroll appears seamless -->
+            
+        </div>
+    </div>
+<div class="heading-container"> 
+    <h1>CUSTOMERS GALLERY</h1> 
+    <div class="heding-image">
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+    </div>
+</div>
+
+
+<div class="gallary-con">
+
+   <div class="Gallar-img">
+        <div class="background-cars" onclick="window.location.href='/customer-gallery'">
+            <img src="{{ $item->customer_image }}" alt="Gallery-car">
+        </div>
+    </div>
+
+</div>
+
+
+  
+  <!-- Modal -->
+  <div id="carouselModal" style="display: none;" >
+    <div class="carousel-div"  >
+      <div id="carouselContainer">
+        <div class="car-con" >
+          <div class="Image-left">
+            <img id="carouselImage2" class="carouselImages-left" src="" alt="Carousel View">  
+          </div>
+          <div class="Image-center" >
+          <img id="carouselImage" class="carouselImages"  src="" alt="Carousel View">
+          </div>
+          <div class="Image-right">
+            <img id="carouselImage3" class="carouselImages-right" src="" alt="Carousel View">
+            </div>
+        </div>
+       <div class="arrow-div">
+    <div>
+        <button onclick="prevImage()" class="carouselContainer-button">
+            <img src="{{ asset('Assests/previous-cion.png') }}" alt="previous-icon">
+        </button>
+    </div>
+    <div>
+        <button onclick="nextImage()" class="carouselContainer-button">
+            <img src="{{ asset('Assests/next-icon.png') }}" alt="next-icon">
+        </button>
+    </div>
+</div>
+<div class="cross-btn-div">
+    <button onclick="closeCarousel()" class="cross-btn">
+        <img src="{{ asset('Assests/x-icon-white.png') }}" alt="cross-icon">
+    </button>
+</div>
+
+    </div>
+    </div>
+      
+  </div>
+  
+
+    <!-- <div class="benefit-bottom-con" >
+        <p>This will be an animated carousel in which images will automatically move to by it self.</p>
+    </div> -->
+    <!-- Carousel -->
+
+</section>
+
+<section class="PFF-Section">
+  <!-- <div class="slidcontain-3" id="carousel1">
+        <div class="slider-row">
+    <div class="slide-item3">
+        <div class="slide-para3">
+            <h4>PAINT PROTECTION FILM (PPF)</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item3">
+        <div class="slide-para3">
+            <h4>PAINT PROTECTION FILM (PPF)</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item3">
+        <div class="slide-para3">
+            <h4>PAINT PROTECTION FILM (PPF)</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item3">
+        <div class="slide-para3">
+            <h4>PAINT PROTECTION FILM (PPF)</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item3">
+        <div class="slide-para3">
+            <h4>PAINT PROTECTION FILM (PPF)</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item3">
+        <div class="slide-para3">
+            <h4>PAINT PROTECTION FILM (PPF)</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item3">
+        <div class="slide-para3">
+            <h4>PAINT PROTECTION FILM (PPF)</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item3">
+        <div class="slide-para3">
+            <h4>PAINT PROTECTION FILM (PPF)</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+  </div> -->
+
+
+    
+    <div class="row Pff-con"  >
+          <div class="Heading-carousel-contact">
+        <div class="carousel-track-heading">
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <div class="heading-set"><h1>PAINT PROTECTION FILM</h1></div>
+            <!-- Duplicate logos to ensure the infinite scroll appears seamless -->
+            
+        </div>
+    </div>
+<div class="heading-container"> 
+    <h1>PAINT PROTECTION FILM</h1> 
+    <div class="heding-image">
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+    </div>
+</div>
+
+        <div class="col-md-12 PFF-Sec" >
+            <div class="col-md-6 PFF-left-sec " >
+                <div class="PFF-h1" >
+                    <h1>
+                    PPF is your car’s #1
+                    defender against
+                    chips and scratches.
+                    </h1>
+                </div>
+                <div class="PFF-para" >
+                    <p>
+                      All vehicles are equipped with high-quality, self-healing paint protection film, offering exceptional durability and convenience. This advanced film boasts self-cleaning properties to keep your vehicle spotless while providing robust defense against damage. Backed by a 10-year warranty, it ensures lasting protection for your investment. We also provide three levels of customized packages tailored to meet your specific needs and preferences.
+                    </p>
+                </div>
+                <div class="PFF-h2" >
+                    <h1>
+                    Front Bumper Only <br>
+                    Full Front End Section <br>
+                    Front End Section with a Trak Pak
+                    </h1>
+                </div>
+                <div class="pff-btn" >
+                    <button>LEARN MORE</button>
+                </div> 
+            </div>
+            <div class="col-md-6 PFF-right-sec" >
+                <div class="PFF-sec-2" >
+                <div class="pff-image-sec" style="background-image: url({{$homepage->ppf_box_image1}});">
+                    <!-- <div class="slidcontain-4" id="carousel1">
+                        <div class="slider-row-PFF">
+                          <div class="slide-item4-1">
+                            <div class="slide-para4">
+                              
+                              <h4>Front Bumper Only (PPF Front Bumper1)</h4>
+                              
+                            </div>
+                          </div>
+                          
+                        </div>
+                    </div> -->
+                </div>
+                <div class="Pff-para" >
+                  <h4>{{$homepage->ppf_box_title1}}</h4>
+                </div>
+            </div>
+            <div class="PFF-sec-22" >
+                <div class="pff-image-sec2" style="background-image: url({{$homepage->ppf_box_image2}});">
+                    <!-- <div class="slidcontain-4" id="carousel1">
+                        <div class="slider-row-PFF">
+                          <div class="slide-item4-2">
+                            <div class="slide-para4">
+                              
+                              <h4>Full Front End Section (PPF Full Front End2)</h4>
+                              
+                            </div>
+                          </div>
+                          <div class="slide-item4-2">
+                              <div class="slide-para4">
+                                <h4>FULL FRONT END SECTION</h4>
+                                <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                              </div>
+                            </div>
+                            <div class="slide-item4-2">
+                              <div class="slide-para4">
+                                <h4>FULL FRONT END SECTION</h4>
+                                <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                              </div>
+                            </div>
+                            <div class="slide-item4-2">
+                              <div class="slide-para4">
+                                <h4>FULL FRONT END SECTION</h4>
+                                <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                              </div>
+                            </div>
+                            <div class="slide-item4-2">
+                              <div class="slide-para4">
+                                <h4>FULL FRONT END SECTION</h4>
+                                <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                              </div>
+                            </div>
+                            
+                          
+                        </div>
+                    </div> -->
+                </div>
+                <div class="Pff-para" >
+                  <h4>{{$homepage->ppf_box_title2}}</h4>
+                </div>
+            </div>
+            <div class="PFF-sec-2" >
+                <div class="pff-image-sec3" style="background-image: url({{$homepage->ppf_box_image3}});">
+                    <!-- <div class="slidcontain-4" id="carousel1">
+                        <div class="slider-row-PFF">
+                          <div class="slide-item4-3">
+                            <div class="slide-para4">
+                              
+                              <h4>Full Front End with Trak Pak (PPF Trak Pak1)</h4>
+                              
+                            </div>
+                          </div>
+                          
+                        </div>
+                    </div> -->
+                    
+                </div>
+                <div class="Pff-para" >
+                  <h4>{{$homepage->ppf_box_title3}}</h4>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="offer-sec">
+    
+    <div class="Heading-carousel-contact">
+        <div class="carousel-track-heading">
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <div class="heading-set"><h1>Our Offers</h1></div>
+            <!-- Duplicate logos to ensure the infinite scroll appears seamless -->
+            
+        </div>
+    </div>
+<div class="heading-container">
+    <h1>Our Offers</h1>
+    <div class="heding-image">
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+    </div>
+</div>
+
+    <div class="offer-content" >
+    <div class="offers-con" >
+        <div class="offfers-input" >
+            <div><h1>AVAIL OFFERS</h1></div>
+            <div>
+                <form>
+                    <div class="offer-form" >
+                        <label for="">Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="offer-form" >
+                        <label for="">Email Address</label>
+                        <input type="email">
+                    </div>
+                    <div class="offer-form" >
+                        <label for="">Which Offer you want to Avail</label>
+                        <input type="text">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="offers-heading" >
+            <div class="offers-num" >
+                <h1>OFFER -1</h1>
+            </div>
+            <div class="offers-num">
+                <h1>OFFER -2</h1>
+            </div>
+            <div class="offers-num" >
+                <h1>OFFER -3</h1>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+@endif
+
+<section class="packages-sec" >
+          <div class="Heading-carousel-contact">
+        <div class="carousel-track-heading">
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <div class="heading-set"><h1>OUR PACKAGES</h1></div>
+            <!-- Duplicate logos to ensure the infinite scroll appears seamless -->
+            
+        </div>
+    </div>
+<div class="heading-container"> 
+    <h1>OUR PACKAGES</h1> 
+    <div class="heding-image">
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+    </div>
+</div>
+  <!--<div class="slidcontain-3" id="carousel1">
+    <div class="slider-row">
+    <div class="slide-item4">
+        <div class="slide-para4">
+            <h4>Our Packages</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item4">
+        <div class="slide-para4">
+            <h4>Our Packages</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item4">
+        <div class="slide-para4">
+            <h4>Our Packages</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item4">
+        <div class="slide-para4">
+            <h4>Our Packages</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item4">
+        <div class="slide-para4">
+            <h4>Our Packages</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item4">
+        <div class="slide-para4">
+            <h4>Our Packages</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item4">
+        <div class="slide-para4">
+            <h4>Our Packages</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+    <div class="slide-item4">
+        <div class="slide-para4">
+            <h4>Our Packages</h4>
+            <img src="{{ asset('Assests/Vector.png') }}" width="20px" height="20px" alt="">
+        </div>
+    </div>
+
+</div>
+
+</div> -->
+    <!-- <div class="slider-set">
+        <div class="slidcontain" id="carousel1">
+          <div class="slider-row">
+            <div class="packages-slide-item">
+              <div class="packages-slide-para">
+                <h4>OUR PACKAGES</h4>
+                <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+              </div>
+            </div>
+            <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="slidcontain package-slidtwo" id="carousel2">
+          <div class="slider-row">
+            <div class="packages-slide-item">
+              <div class="packages-slide-para">
+                <h4>OUR PACKAGES</h4>
+                <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+              </div>
+            </div>
+            <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+              <div class="packages-slide-item">
+                <div class="packages-slide-para">
+                  <h4>OUR PACKAGES</h4>
+                  <img src="./Assests/Vector.png" width="20px" height="20px" alt="">
+                </div>
+              </div>
+          </div>
+        </div>
+    </div> -->
+    <style>
+    .car-bg p{
+    opacity:100% !important;
+    font-weight:700 !important;
+    }
+    </style>
+    <div class="package-center">
+    <div class="package-con">
+        <div class="packages" style="border: 4px solid #386556" > 
+            <div class="car-bg">
+                <div class="para-icon">
+                    <img src="{{ asset('Assests/cube-icon.png') }}" alt="Cube-icon">
+                </div>
+                <div>
+                    <h1>Your Text Here</h1>
+                </div>
+                <div>
+                    <p>Your Text Here</p>
+                </div>
+            </div>
+            <div>
+                <div class="packages-para-con">
+                    <p   >
+                        Your Text Here
+                    </p>
+                </div>
+            </div>
+            <div class="package-btn">
+                <button>Your Text Here</button>
+            </div> 
+        </div>
+
+        <div class="packages" style="border: 4px solid #652b2b" >
+            <div class="car-bg">
+                <div class="para-icon">
+                    <img src="{{ asset('Assests/cube-icon.png') }}" alt="Cube-icon">
+                </div>
+                <div>
+                    <h1>Your Text Here</h1>
+                </div>
+                <div>
+                    <p>Your Text Here</p>
+                </div>
+            </div>
+            <div>
+                <div class="packages-para-con">
+                    <p>
+                        Your Text Here
+                    </p>
+                </div>
+            </div>
+            <div class="package-btn">
+                <button>Your Text Here</button>
+            </div> 
+        </div>
+
+        <div class="packages" style="border: 4px solid #FFD700" >
+            <div class="car-bg">
+                <div class="para-icon">
+                    <img src="{{ asset('Assests/cube-icon.png') }}" alt="Cube-icon">
+                </div>
+                <div>
+                    <h1>Your Text Here</h1>
+                </div>
+                <div>
+                    <p>Your Text Here</p>
+                </div>
+            </div>
+            <div>
+                <div class="packages-para-con">
+                    <p>
+                        Your Text Here
+                    </p>
+                </div>
+            </div>
+            <div class="package-btn">
+                <button>Your Text Here</button>
+            </div> 
+        </div>
+
+        <div class="packages" style="border: 4px solid #7851A9" style="max-width:35%;">
+            <div class="car-bg">
+                <div class="para-icon">
+                    <img src="{{ asset('Assests/cube-icon.png') }}" alt="Cube-icon">
+                </div>
+                <div>
+                    <h1>Your Text Here</h1>
+                </div>
+                <div>
+                    <p>Your Text Here</p>
+                </div>
+            </div>
+            <div>
+                <div class="packages-para-con">
+                    <p>
+                        Your Text Here
+                    </p>
+                </div>
+            </div>
+            <div class="package-btn">
+                <button>Your Text Here</button>
+            </div> 
+        </div>
+
+        <div class="packages" style="border: 4px solid #ff8800" >
+            <div class="car-bg2">
+                <div class="para-icon">
+                    <img src="{{ asset('Assests/cube-icon.png') }}" alt="Cube-icon">
+                </div>
+                <div>
+                    <h1>{{ $homepage->package5_sub_title }}</h1>
+                </div>
+                <div>
+                    <p>{{ $homepage->package5_desc }}</p>
+                </div>
+            </div>
+            <div>
+                <div class="packages-para-con">
+                    <p   >
+                  {!! $homepage->package5_list !!}
+                    </p>
+                </div>
+            </div>
+            <div class="package-btn">
+                <button>{{ $homepage->package5_title }}</button>
+            </div> 
+        </div>
+
+       <!-- <div class="packages">
+            <div class="car-bg2">
+                <div class="para-icon">
+                    <img src="{{ asset('Assests/cube-icon.png') }}" alt="Cube-icon">
+                </div>
+                <div>
+                    <h1>ULTIMATE Package</h1>
+                </div>
+                <div>
+                    <p>Paint, Glass, Wheels, Brake Calipers & Interior Protection</p>
+                </div>
+            </div>
+            <div>
+                <div class="packages-para-con">
+                    <p>
+                        • Ceramic Coat Paint, Glass, Wheels, Brake Calipers & Interior Protection <br>
+                        • Claybar prep & paint decontamination. <br>
+                        • 2 step paint correction & polishing.
+                    </p>
+                </div>
+            </div>
+            <div class="package-btn">
+                <button>Request Quote</button>
+            </div> 
+        </div> -->
+    </div>
+</div>
+
+</section>
+
+<section class="upload-video"  >
+
+       <div class="background-video2">
+        <iframe width="1280" height="720" 
+            src="{{$homepage->our_story_video}}" 
+            title="Our Story - 35 years of experience" 
+            frameborder="0" allow="autoplay; encrypted-media"
+            loop=1
+            referrerpolicy="strict-origin-when-cross-origin" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        </iframe>
+    </div>
+    <!--<video autoplay muted loop class="background-video2">
+        <source src="{{ asset('Assests/Sample 2.mp4') }}" type="video/mp4">
+    </video>-->
+    <div class="content">
+        <div class="video-content">
+            <div class="video-first-head">
+                <div class="headin-dash">
+                    <img src="{{ asset('Assests/dash-icon-1.png') }}" width="70%" alt="dash-icon-1">
+                    <img src="{{ asset('Assests/dash-icon-2.png') }}" alt="dash-icon-2">
+                </div>
+                <div class="dash-heading">
+                    <h4>About Company</h4>
+                </div>
+            </div>
+            <div class="video-head">
+                <h1>Our Story</h1>
+            </div>
+            <div class="video-para">
+                <p class="original-content" >
+                  Our commitment is providing exceptional customer service and high-quality work in Southern Maryland and the DMV (Washington DC, Maryland, and Virginia) area. Our 35 years of experience in the body shop industry sets us apart from our competition. The wealth of expertise accompanied by the focus of exceeding customers’ expectations are the elements of our success. Using my auto experience, skills and training, I am committed to maintaining the highest standards of work. We are proud of our repeat business and positive word of mouth referrals as they stem from the commitment we make to our customers, addressing all of their needs and concerns. In addition, we strive to provide our customers with quick turnaround time, striving to meet or exceed estimated repair times.
+                </p>
+            </div>
+            <div>
+                <div class="uplaodvideo-btn">
+                    <button onclick="window.location.href = '{{ route('user.about') }}'">ABOUT MORE <span><img src="{{ asset('Assests/arrow-icon.png') }}" alt="arrow"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="clients-reviews" >
+  <div class="Heading-carousel-contact">
+    <div class="carousel-track-heading">
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <div class="heading-set"><h1>Client Testimonials</h1></div>
+        <!-- Duplicate logos to ensure the infinite scroll appears seamless -->
+        
+    </div>
+</div>
+<div class="heading-container">
+    <h1>Client Testimonials</h1>
+    <div class="heding-image">
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+        <div><img src="{{ asset('Assests/Line 13.png') }}" alt="line"></div>
+    </div>
+</div>
+
+<div class="reviews" >
+  <div class="reveiws-con" >
+    <div class="google-cen" >
+      <div class="google-con" > 
+       <div>
+        <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+       </div>
+       <div>
+        <p>Reviews</p>
+       </div>  
+      </div>
+      <div class="rating-con" >
+        <div>
+          <h1>5.0 (146) Reviews</h1>
+        </div>
+        <div>
+          <div>
+            <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+            <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+            <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+            <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+            <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="review-btn">
+<button onclick="location.href='https://www.google.com/maps/place/PRO+CERAMIC+-+Best+Auto+Salon/@38.6212405,-76.9111874,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7a1839396eb0d:0xea401586402c7413!8m2!3d38.6212363!4d-76.9086125!16s%2Fg%2F11swzkvn8_?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D'">Review us on Google</button>
+    </div>
+  </div>
+
+  <div class="reviews-gallery">
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{$review->user_logo}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>{{$review->name}}</h1></div>
+           <!-- <div> <p>Designation</p> </div> -->
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>{{$review->description}}</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+   
+                                <h4>No Reviews Found</h4>
+                        
+   <!-- <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="garllery-con" >
+        <div class="review-image-con" >
+        <div>
+          <img src="{{asset('Assests/Reveiw-person.png')}}" alt="person">
+        </div>
+        <div>
+           <div> <h1>Name</h1></div>
+           <div> <p>Designation</p> </div>
+        </div>
+        </div>
+        <div class="start-con" >
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        <img src="{{asset('Assests/Star logo.png')}}" alt="star">
+        </div>
+        <div class="reveiws-para" >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="reveiw-icon" >
+        
+          <img src="{{asset('Assests/google logo 1.png')}}" alt="">
+         
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <button id="toggle-view">Load More</button>
+</div>
+
+</section>
+
+
+
+
+<script>
+
+document.querySelector('header').id = 'Main-web';
+
+document.addEventListener("DOMContentLoaded", function () {
+  function initContinuousCarousel(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const sliderRow = carousel.querySelector(".slider-row");
+    const slides = Array.from(sliderRow.children);
+
+    // Duplicate slides for continuous effect
+    slides.forEach((slide) => {
+      const clone = slide.cloneNode(true);
+      sliderRow.appendChild(clone);
+    });
+
+    // Adjust the scroll speed by setting the animation duration
+    sliderRow.style.animationDuration = `${slides.length * 2}s`;
+  }
+
+  // Initialize both carousels
+  initContinuousCarousel("carousel1");
+  initContinuousCarousel("carousel2");
+});
+
+// document.querySelector('.benefits-para').addEventListener('click', function() {
+    
+//     this.classList.toggle('open');
+// });
+
+document.querySelectorAll('.benefits-para').forEach(function (benefitPara) {
+    var hiddenPara = benefitPara.querySelector('.hidden-para');
+
+    // Open the hidden paragraph by default when the page loads
+    var isSmallScreen = window.matchMedia("(max-width: 375px)").matches;
+    var heightValue = isSmallScreen ? "122px" : "198px";
+
+    hiddenPara.style.display = "block";
+    hiddenPara.style.height = heightValue;
+    hiddenPara.style.opacity = "1"; // Ensure visibility
+    hiddenPara.style.width = "384px";
+    benefitPara.classList.add('open'); // Add open class to keep arrow in rotated state
+
+    // Add event listener for toggling on click
+    benefitPara.addEventListener('click', function () {
+        // Detect screen size again in case of resize
+        var isSmallScreen = window.matchMedia("(max-width: 375px)").matches;
+        var heightValue = isSmallScreen ? "122px" : "198px";
+
+        // Toggle display of the .hidden-para
+        if (hiddenPara.style.display === "none" || hiddenPara.style.display === "") {
+            hiddenPara.style.display = "block";
+
+            setTimeout(function () {
+                hiddenPara.style.height = heightValue;
+                hiddenPara.style.opacity = "1"; // Fade in
+                hiddenPara.style.width = "384px";
+            }, 10);
+        } else {
+            hiddenPara.style.height = "0";
+            hiddenPara.style.opacity = "0";
+
+            setTimeout(function () {
+                hiddenPara.style.display = "none";
+            }, 300); // Match the duration of the transition
+        }
+
+        // Toggle the open class to rotate the arrows
+        benefitPara.classList.toggle('open');
+    });
+});
+
+// Listen for screen resize to ensure height is updated dynamically
+window.addEventListener('resize', function () {
+    document.querySelectorAll('.benefits-para').forEach(function (benefitPara) {
+        var hiddenPara = benefitPara.querySelector('.hidden-para');
+
+        // If .hidden-para is visible, update its height on resize
+        if (hiddenPara.style.display === "block") {
+            var isSmallScreen = window.matchMedia("(max-width: 375px)").matches;
+            var heightValue = isSmallScreen ? "122px" : "198px";
+            hiddenPara.style.height = heightValue;
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.gallery-item');
+  const toggleButton = document.getElementById('toggle-view');
+  let initialVisibleItems = window.innerWidth <= 1276 ? 6 : 8; // Set based on screen size
+  let allVisible = false;
+
+  // Function to display items up to a specific count
+  const showItems = (count) => {
+    items.forEach((item, index) => {
+      item.style.display = index < count ? 'block' : 'none';
+    });
+  };
+
+  showItems(initialVisibleItems);
+
+  // Adjust initialVisibleItems on resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 1276) {
+      initialVisibleItems = 6;
+    } else {
+      initialVisibleItems = 8;
+    }
+
+    // Update displayed items if "Load More" is not active
+    if (!allVisible) {
+      showItems(initialVisibleItems);
+    }
+  });
+
+  // Toggle between showing more and showing less
+  toggleButton.addEventListener('click', () => {
+    if (allVisible) {
+      // Show less
+      showItems(initialVisibleItems);
+      toggleButton.textContent = 'Load More';
+    } else {
+      // Show all
+      showItems(items.length);
+      toggleButton.textContent = 'Show Less';
+    }
+    allVisible = !allVisible; // Toggle state
+  });
+});
+
+
+const images = Array.from(document.querySelectorAll('.Gallar-img img')).map(img => img.src);
+
+let currentIndex = 0;
+
+function openCarousel(index) {
+    currentIndex = index;
+    updateCarouselImages();
+    const modal = document.getElementById('carouselModal');
+    modal.style.display = 'flex';
+}
+
+function closeCarousel() {
+    const modal = document.getElementById('carouselModal');
+    modal.style.display = 'none';
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarouselImages();
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarouselImages();
+}
+
+function updateCarouselImages() {
+    const imgElement = document.getElementById('carouselImage');
+    const imgElement2 = document.getElementById('carouselImage2');
+    const imgElement3 = document.getElementById('carouselImage3');
+
+    imgElement.src = images[currentIndex];
+    imgElement2.src = images[(currentIndex - 1 + images.length) % images.length];
+    imgElement3.src = images[(currentIndex + 1) % images.length];
+}
+
+document.getElementById('carouselModal').addEventListener('click', function (event) {
+    const container = document.getElementById('carouselContainer');
+    if (!container.contains(event.target)) {
+        closeCarousel();
+    }
+});
+
+
+// Function to remove semicolons from all text nodes in the document
+function removeSemicolons() {
+    const allElements = document.querySelectorAll("*");
+
+    
+    allElements.forEach((element) => {
+        // Iterate through child nodes of the element
+        element.childNodes.forEach((node) => {
+            // Check if the node is a text node
+            if (node.nodeType === Node.TEXT_NODE) {
+                // Replace semicolons with an empty string
+                node.nodeValue = node.nodeValue.replace(/;/g, "");
+            }
+        });
+    });
+}
+
+// Call the function to remove semicolons
+removeSemicolons();
+
+window.addEventListener('resize', function() {
+    var contentElement = document.querySelector('.original-content');
+    if (window.innerWidth <= 660) {
+        contentElement.innerHTML = `
+            Our commitment is providing exceptional customer service and high-quality work in Southern MD and the DMV  . . . . 
+        `;
+    } else {
+        contentElement.innerHTML = `
+            Our commitment is providing exceptional customer service and high-quality work in Southern Maryland and the DMV (Washington DC, Maryland, and Virginia) area. Our 35 years of experience in the body shop industry sets us apart from our competition. The wealth of expertise accompanied by the focus of exceeding customers’ expectations are the elements of our success. Using my auto experience, skills and training, I am committed to maintaining the highest standards of work. We are proud of our repeat business and positive word of mouth referrals as they stem from the commitment we make to our customers, addressing all of their needs and concerns. In addition, we strive to provide our customers with quick turnaround time, striving to meet or exceed estimated repair times.
+        `;
+    }
+});
+
+if (window.innerWidth <= 660) {
+    document.querySelector('.original-content').innerHTML = `
+        Our commitment is providing exceptional customer service and high-quality work in Southern MD and the DMV  . . . . 
+    `;
+}
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const benefitsPara = document.querySelectorAll('.benefits-para');
+    
+//     benefitsPara.forEach(item => {
+//         item.addEventListener('click', function() {
+//             const hiddenPara = item.nextElementSibling; 
+//             item.classList.toggle('active'); 
+            
+            
+//             if (item.classList.contains('active')) {
+//                 hiddenPara.style.display = 'block';
+//             } else {
+//                 hiddenPara.style.display = 'none';
+//             }
+//         });
+//     });
+// });
+
+    
+//     document.querySelectorAll('.benefits-para').forEach(function(element) {
+//     element.querySelector('.hidden-con').addEventListener('click', function() {
+//         element.classList.toggle('active');
+//     });
+// });
+
+</script>
+    </main>
+
+    <!-- Language Modal -->
+    <div class="modal fade" id="languageModal" tabindex="-1" aria-labelledby="languageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="languageModalLabel">Select a Language</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body languageBody">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="languageSearch">
+                                    <input type="text" placeholder="Search language" class="form-control"
+                                        id="searchInput" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="countriesList">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ asset('assets/user/js/plugins.min.js') }}"></script>
+    <script src="{{ asset('assets/user/js/readmore.js') }}"></script>
+    <script src="{{ asset('assets/user/js/main.js') }}"></script>
+    <script src="{{ mix('assets/js/app.js') }}"></script>
+    <script src="{{ mix('assets/js/web/chat.js') }}"></script>
+    <script src="{{ mix('assets/js/web/set-user-on-off.js') }}"></script>
+    <script src="{{ asset('assets/user/js/wow.min.js') }}"></script>
+    <script src="{{ asset('theme-assets/js/emojionearea.js') }}"></script>
+    <script src="{{ asset('assets/js/iziToast.min.js') }}"></script>
+    <script src="{{ asset('assets/js/moment.min.js') }}"></script>
+    <script src="{{ asset('theme-assets/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jsrender.js') }}"></script>
+    <script src="{{ asset('assets1/user/js/custom.js') }}"></script>
+    
+    <script>
+        // ============================================
+        // Video Popup Show and Close Script Start
+        // ============================================
+        function openPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.body.classList.add("popup-open");
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.body.classList.remove("popup-open");
+        }
+
+        window.onclick = function(event) {
+            var popup = document.getElementById("popup");
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        };
+        // ============================================
+        // Video Popup Show and Close Script End
+        // ============================================
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#language-btn").click(function() {
+                var myModal = new bootstrap.Modal(document.getElementById('languageModal'));
+                myModal.show();
+            });
+        });
+    </script>
+
+
+
+
+   
+</body>
+
+
+
+</html>

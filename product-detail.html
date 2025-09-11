@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Design</title>
+</head>
+<style>
+    label{
+        color: black !important;
+    }
+    .pd-wrap {
+        padding: 40px 0;
+        font-family: 'Poppins', sans-serif;
+        /* background-image: url("/Assests/badge-img/hero/product-banner.jpg"); */
+        background-size: cover;
+    }
+    /* .pd-child {
+        background-color: #000;
+    } */
+    .heading-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sub-heading {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        display: block;
+        font-weight: 600;
+        color: #2e9ca1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .heading-section h2 {
+        font-size: 42px;
+        font-weight: 500;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(30deg, #d3701e, #ffdc63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    }
+
+    .user-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: relative;
+        min-width: 80px;
+        background-size: 100%;
+    }
+
+    .carousel-testimonial .item {
+        padding: 30px 10px;
+    }
+
+    .quote {
+        position: absolute;
+        top: -23px;
+        color: #2e9da1;
+        font-size: 27px;
+    }
+
+    .name {
+        margin-bottom: 0;
+        line-height: 14px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .position {
+        color: #adadad;
+        font-size: 14px;
+    }
+
+    .owl-nav button {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        outline: none;
+        height: 25px;
+    }
+
+    .owl-nav button svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .owl-nav button.owl-prev {
+        left: 25px;
+    }
+
+    .owl-nav button.owl-next {
+        right: 25px;
+    }
+
+    .owl-nav button span {
+        font-size: 45px;
+    }
+
+    .product-thumb .item img {
+        height: 100px;
+    }
+
+    .product-name {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 22px;
+        margin-bottom: 4px;
+    }
+
+    .product-price-discount {
+        font-size: 22px;
+        font-weight: 400;
+        padding: 10px 0;
+        clear: both;
+    }
+
+    .product-price-discount span.line-through {
+        text-decoration: line-through;
+        margin-left: 10px;
+        font-size: 14px;
+        vertical-align: middle;
+        color: #a5a5a5;
+    }
+
+    .display-flex {
+        display: flex;
+    }
+
+    .align-center {
+        align-items: center;
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .reviews-counter {
+        font-size: 13px;
+    }
+
+    .reviews-counter span {
+        vertical-align: -2px;
+    }
+
+    .rate {
+        float: left;
+        padding: 0 10px 0 0;
+    }
+
+    .rate:not(:checked)>input {
+        position: absolute;
+        top: -9999px;
+    }
+
+    .rate:not(:checked)>label {
+        float: right;
+        width: 15px;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 21px;
+        color: #ccc;
+        margin-bottom: 0;
+        line-height: 21px;
+    }
+
+    .rate:not(:checked)>label:before {
+        content: '\2605';
+    }
+
+    .rate>input:checked~label {
+        color: #ffc700;
+    }
+
+    .rate:not(:checked)>label:hover,
+    .rate:not(:checked)>label:hover~label {
+        color: #deb217;
+    }
+
+    .rate>input:checked+label:hover,
+    .rate>input:checked+label:hover~label,
+    .rate>input:checked~label:hover,
+    .rate>input:checked~label:hover~label,
+    .rate>label:hover~input:checked~label {
+        color: #c59b08;
+    }
+
+    .product-dtl p {
+        font-size: 14px;
+        line-height: 24px;
+        color: #7a7a7a;
+    }
+
+    .product-dtl .form-control {
+        font-size: 15px;
+    }
+
+    .product-dtl label {
+        line-height: 16px;
+        font-size: 15px;
+    }
+
+    .form-control:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .product-count {
+        margin-top: 15px;
+    }
+
+    .product-count .qtyminus,
+    .product-count .qtyplus {
+        width: 34px;
+        height: 34px;
+        background: #212529;
+        text-align: center;
+        font-size: 19px;
+        line-height: 36px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .owl-carousel .owl-item img {
+            margin: 0 auto;
+            display: block;
+            width: 60% !important;
+        }
+    .product-count .qtyminus {
+        border-radius: 3px 0 0 3px;
+    }
+
+    .product-count .qtyplus {
+        border-radius: 0 3px 3px 0;
+    }
+
+    .product-count .qty {
+        width: 60px;
+        text-align: center;
+    }
+
+    .round-black-btn {
+        border-radius: 4px;
+        background: #212529;
+        color: #fff;
+        padding: 7px 45px;
+        display: inline-block;
+        margin-top: 20px;
+        border: solid 2px #212529;
+        transition: all 0.5s ease-in-out 0s;
+    }
+
+    .round-black-btn:hover,
+    .round-black-btn:focus {
+        background: transparent;
+        color: #212529;
+        text-decoration: none;
+    }
+
+    .product-info-tabs {
+        margin-top: 25px;
+    }
+    .product-info-tabs .nav-link {
+        color: #000 !important;
+    }
+    .product-info-tabs .nav-tabs .nav-item.show .nav-link, .product-info-tabs .nav-tabs .nav-link.active, .product-info-tabs .nav-tabs .nav-link.active:hover {
+        font-weight: 700;
+        font-family: 'Open Sans';
+    }
+    .product-info-tabs .nav-tabs {
+        border-bottom: 2px solid #d8d8d8;
+    }
+
+    .product-info-tabs .nav-tabs .nav-item {
+        margin-bottom: 0;
+    }
+    
+    .product-info-tabs .nav-tabs .nav-link {
+        border: none;
+        border-bottom: 2px solid transparent;
+        color: #323232;
+    }
+
+    .product-info-tabs .nav-tabs .nav-item .nav-link:hover {
+        border: none;
+    }
+
+    .product-info-tabs .nav-tabs .nav-item.show .nav-link,
+    .product-info-tabs .nav-tabs .nav-link.active,
+    .product-info-tabs .nav-tabs .nav-link.active:hover {
+        border: none;
+        border-bottom: 2px solid #d8d8d8;
+        font-weight: bold;
+    }
+
+    .product-info-tabs .tab-content .tab-pane {
+        padding: 30px 20px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #7a7a7a;
+    }
+
+    .review-form .form-group {
+        clear: both;
+    }
+
+    .mb-20 {
+        margin-bottom: 20px;
+    }
+
+    .review-form .rate {
+        float: none;
+        display: inline-block;
+    }
+
+    .review-heading {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        color: #000;
+    }
+
+    .review-form .form-control {
+        font-size: 14px;
+    }
+
+    .review-form input.form-control {
+        height: 40px;
+    }
+
+    .review-form textarea.form-control {
+        resize: none;
+    }
+
+    .review-form .round-black-btn {
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    #thumb {
+        display: none;
+    }
+    a {
+      text-decoration: none !important;
+    }
+</style>
+
+<body>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- slick-slider -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
+        integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
+        integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="css/style.css" class="css">
+        
+
+
+
+        <div class="loader-mask">
+            <div class="loader">
+                <div></div>
+                <div></div>
+            </div>
+          </div>
+          <!-- Preloader -->
+          
+          
+          
+            <section class="top-header">
+              <div class="container">
+          
+          
+                <div class="row top-row" data-aos="fade-up">
+          
+                  <div class="col-md-2">
+                    <div class="top-email-div">
+                      <div class="nav-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                      </div>
+                      <div class="icon-text-con">
+                        <a href="mailto:hello@badge-design.co.uk">
+                          <p>hello@badge-design.co.uk</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="top-email-div">
+                      <div class="nav-icon">
+                        <i class="fa-brands fa-facebook"></i>
+                      </div>
+                      <div class="icon-text-con">
+                        <a href="https://www.facebook.com/">
+                          <p>badgedesign.fac</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="top-email-div">
+                      <div class="nav-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                      </div>
+                      <div class="icon-text-con">
+                        <a href="https://www.instagram.com/">
+                          <p>badgedesign.inst</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="top-email-div">
+                      <div class="nav-icon">
+                        <i class="fa-brands fa-x-twitter"></i>
+                      </div>
+                      <div class="icon-text-con">
+                        <a href="https://www.instagram.com/">
+                          <p>badgedesign.X</p>
+                        </a>
+                      </div>
+                    </div>
+          
+          
+          
+          
+                  </div>
+                  <div class="col-md-3">
+                    <div class="top-button">
+                      <a href="tel:+0117 9525856"> Contact Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="header-center">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12" data-aos="fade-down">
+                    <div class="mid-header-div">
+                      <div class="Heading-carousel-contact">
+                          <div class="carousel-track-heading">
+                              <div class="heading-set">
+                                  <p>Get your custom badge designs, fabric labels, epaulettes, and packaging labels with premium quality and
+                                  durability! Multiple styles available with fast 48-72 hour turnaround!</p>
+                              </div>
+                              
+                              <!-- Duplicate logos to ensure the infinite scroll appears seamless -->
+                      
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <header>
+          
+              <nav class="navbar navbar-expand-lg navbar-light main-menu" id="slide-nav">
+                <div class="container" id="dropdown-set">
+                  <a class="navbar-brand" href="/index.html"><img src="/Assests/badge-img/logos/logo.png" alt="" width="160px"></a>
+                  <button class="navbar-toggler" type="button" style="background: linear-gradient(30deg, #ff851E, #ffc703)"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-menu">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown" id="services-dropdown">
+                          <a class="nav-link dropdown-toggle dropdown" id="navbarDropdown" role="button" aria-expanded="false">
+                            Services
+                          </a>
+                          <div class="dropdown">
+                            <ul class="dropdown-content">
+                              <div>
+                                <a href="/police.html"><li>Police</li></a>
+                                <a href="/ambulance.html"><li>Ambulance</li></a>
+                                <a href="/reflactive.html"> <li>Reflective Badges</li></a>
+                                <a href="/organic-range.html"> <li>Organic Range</li></a>
+                                <a href="/button-badges.html"> <li>Button Badges</li></a>
+                                <div >
+                                  <ul class="unDrop">
+                                    <li class="dropdown-2" id="hoverBox">Badges
+                                      <ul class="dropdown-list" id="hoverArea" style="display: none;">
+                                        <a href="/product-detail.html"><li>Embroidered Printed & Woven</li></a>
+                                        <a href="/product-detail.html"><li>Printed Badges</li></a>
+                                        <a href="/product-detail.html"><li>Woven Badges</li></a>
+                                        
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                  
+                                </div>
+                                <a href="/landyards.html"> <li>Landyards</li></a>
+                                <a href="/epaulettes.html"> <li>Epaulettes</li></a>
+                                <a href="/Industry-Workwear.html"> <li>Industry Workwear</li></a>
+                                <a href="/judo-backnumbers.html"> <li>Judo Backnumbers</li></a>
+                                <a href="http://www.musicstandbanners.co.uk/" target="_blank"> <li>Music Stand Banners</li></a>
+                                <a href="http://www.chenilleuk.com/" target="_blank"> <li>Chenille UK</li></a>
+                              </div>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/shop.html" tabindex="-1" aria-disabled="true">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/gallery.html" tabindex="-1" aria-disabled="true">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/reviews.html" tabindex="-1" aria-disabled="true">REVIEWS</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          CERAMICS COATING BRANDS
+                        </a>
+                      </li> -->
+                        <li class="nav-item">
+                          <a class="nav-link" href="/contact.html" tabindex="-1" aria-disabled="true">CONTACT US</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- <div id="hidden-content-nav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="hidden-slide">
+                      <li><a class="nav-hidden-item" href="{{route('user.exterior-protection')}}">Exterior Protection</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.interior-protection')}}">Interior Protection</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.maintainance')}}">Maintenance</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.brand-new-vehicles')}}">Brand New Vehicles</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.motorcycles')}}">Motorcycles</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.collision-repair')}}">Collision Repair</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.apparel')}}">Apparel</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.deionizer-system')}}">Deionizer System</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.classic-street-rods')}}">Classic Street Rods</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.touch-up-process')}}">Touch Up Process</a></li>
+                      <li><a class="nav-hidden-item" href="{{route('user.our-products')}}">Our Products</a></li>
+                    </ul>
+                  </div> -->
+                  </div>
+                  <div class="nav-icons-parent">
+                    <div class="top_icons">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+                  <div class="shop_icons">
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+                </div>
+              </nav>
+          
+              </div>
+            </header>
+          
+            <section class="hero-section about-banner" data-aos="fade-up">
+              <div class="about-child">
+              <div class="container" >
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="hero-text-parent">
+                      <div class="hero-text">
+                        <h1>Product Details</h1>
+                        <!-- <p>We are able to offer you slider epaulettes at fantastic rates; by purchasing online and selecting bulk quantity we can include up to two lines of text in a wide range of fabric and embroidery colours. The size would be 6cm wide at the top, 7cm wide at the bottom and 11cm high.
+          
+                          There are many other variations in our other categories that enable you to personalise your epaulettes to any extent. Be it Police, Security, Ambulance or your Company/Club there's the option for you.
+                          
+                          If you cannot find what you specifically want or if you have any general enquiries then please contact us on 0117 9525856.</p> -->
+          
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+    <div class="pd-wrap">
+        <div class="pd-child">
+        <div class="container">
+            <div class="heading-section">
+                <h2>Product Details</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="slider" class="owl-carousel product-slider">
+                        <div class="item">
+                            <img
+                                src="/Assests/badge-img/cart-2.png" />
+                        </div>
+                        <div class="item">
+                            <img src="/Assests/badge-img/police/product2.png" />
+                        </div>
+                        <div class="item">
+                            <img
+                                src="/Assests/badge-img/cart-5.png" />
+                        </div>
+                        <div class="item">
+                            <img src="/Assests/badge-img/industry/product7.jpg" />
+                        </div>
+                        <div class="item">
+                            <img
+                                src="/Assests/badge-img/industry/product4.jpg" />
+                        </div>
+                        <div class="item">
+                            <img src="/Assests/badge-img/industry/product2.jpg" />
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
+                        </div>
+                    </div>
+                    <div id="thumb" class="owl-carousel product-thumb">
+                        <div class="item">
+                            <img
+                                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
+                        </div>
+                        <div class="item">
+                            <img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
+                        </div>
+                        <div class="item">
+                            <img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
+                        </div>
+                        <div class="item">
+                            <img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product-dtl">
+                        <div class="product-info">
+                            <div class="product-name">Printed Badges | FREE Print Set Up. Made in UK</div>
+                            <div class="reviews-counter">
+                                <div class="rate">
+                                    <input type="radio" id="star5" name="rate" value="5" checked />
+                                    <label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" checked />
+                                    <label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" checked />
+                                    <label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1" />
+                                    <label for="star1" title="text">1 star</label>
+                                </div>
+                                <span>3 Reviews</span>
+                            </div>
+                            <div class="product-price-discount"><span>£180.00</span><span
+                                    class="line-through">£199.00</span></div>
+                        </div>
+                        <p>To benefit from these fantastic online prices, with unrivaled finish quality:
+
+                          1. Sublimation printed.
+                          
+                          2. Delivery will be approx 1 to 2 weeks after confirmation of artwork. (Rush/Express orders please call)
+                          
+                          3. Minimum quantity is 100. (orders under 100 please call)
+                          
+                          4. A very good quality image, preferably vectorised, is required. (need artwork help? Please call)
+                          
+                          5. Size - please enter just the longest dimension.
+                          
+                          Please use the note box for:
+                          
+                          a) Stating a specific size up to 10cm. (over 12cm please call)
+                          
+                          b) Advising of colours.
+                          
+                          c) Advising us of any other detail that you feel we should know (call us if easier)
+                          
+                          d) Advising us of special shapes.
+                          
+                          If you want less than 100 badges, or need them quicker, or need large/small sizes, or have specialist requirements then please call us for our standard pricing.
+                          
+                          Included in price: All set up charges. Artwork for approval. VAT & Delivery are extra.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="size">Size</label>
+                                <select id="size" name="size" class="form-control">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="color">Colour</label>
+                                <select id="color" name="color" class="form-control">
+                                    <option>Blue</option>
+                                    <option>Green</option>
+                                    <option>Red</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="product-count">
+                            <label for="size">Quantity</label>
+                            <form action="#" class="display-flex">
+                                <div class="qtyminus">-</div>
+                                <input type="text" name="quantity" value="1" class="qty">
+                                <div class="qtyplus">+</div>
+                            </form>
+                            <a href="#" class="round-black-btn">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-info-tabs">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab"
+                            aria-controls="description" aria-selected="true">Description</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab"
+                            aria-controls="review" aria-selected="false">Reviews (0)</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel"
+                        aria-labelledby="description-tab">
+                        Product Details
+                        To benefit from these fantastic online prices, with unrivaled finish quality:
+
+                        1. Sublimation printed.
+
+                        2. Delivery will be approx 1 to 2 weeks after confirmation of artwork. (Rush/Express orders please call)
+
+                        3. Minimum quantity is 100. (orders under 100 please call)
+
+                        4. A very good quality image, preferably vectorised, is required. (need artwork help? Please call)
+
+                        5. Size - please enter just the longest dimension.
+
+                        Please use the note box for:
+
+                        a) Stating a specific size up to 10cm. (over 12cm please call)
+
+                        b) Advising of colours.
+
+                        c) Advising us of any other detail that you feel we should know (call us if easier)
+
+                        d) Advising us of special shapes.
+
+                        If you want less than 100 badges, or need them quicker, or need large/small sizes, or have specialist requirements then please call us for our standard pricing.
+
+                        Included in price: All set up charges. Artwork for approval. VAT & Delivery are extra.
+                    </div>
+                    <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                        <div class="review-heading">REVIEWS</div>
+                        <p class="mb-20">There are no reviews yet.</p>
+                        <form class="review-form">
+                            <div class="form-group">
+                                <label>Your rating</label>
+                                <div class="reviews-counter">
+                                    <div class="rate">
+                                        <input type="radio" id="star5" name="rate" value="5" />
+                                        <label for="star5" title="text">5 stars</label>
+                                        <input type="radio" id="star4" name="rate" value="4" />
+                                        <label for="star4" title="text">4 stars</label>
+                                        <input type="radio" id="star3" name="rate" value="3" />
+                                        <label for="star3" title="text">3 stars</label>
+                                        <input type="radio" id="star2" name="rate" value="2" />
+                                        <label for="star2" title="text">2 stars</label>
+                                        <input type="radio" id="star1" name="rate" value="1" />
+                                        <label for="star1" title="text">1 star</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Your message</label>
+                                <textarea class="form-control" rows="10"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="" class="form-control" placeholder="Name*">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="" class="form-control" placeholder="Email Id*">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="round-black-btn">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div style="text-align:center;font-size:14px;padding-bottom:20px;">Get free icon packs for your next project
+                at <a href="http://iiicons.in/" target="_blank"
+                    style="color:#ff5e63;font-weight:bold;">www.iiicons.in</a></div> -->
+        </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left" data-aos="flip-down">
+            <a href="/index.html">
+            <img src="/Assests/badge-img/logos/logo.png" alt="Best Auto Salon Logo" class="footer-logo" />
+            </a>
+            <p class="contact-info">
+              CALL US ANYTIME<br />
+              <a href="tel:+0117 9525856">+0117 9525856</a>
+            </p>
+            <p class="location">
+              OUR LOCATION<br />
+              <a href=""> Unit 4E, Crofts
+                End Industrial Estate, St. George,
+                Bristol, BS5 7UW </a>
+            </p>
+            <p class="location">
+              Opening Times<br />
+              <a href=""> Monday - Friday: 8am - 4:30pm
+                Weekends: Closed <br>Bank Holidays: Closed </a>
+            </p>
+            <button class="appointment-btn">Order Now</button>
+          </div>
+    
+          <div class="footer-center" data-aos="flip-up">
+            <form class="newsletter-form">
+              <div>
+                <label for="email">NEWS LETTER</label>
+              </div>
+              <div class="footer-input-div">
+                <input type="email" id="email" placeholder="Email Address" required />
+              </div>
+              <div>
+                <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+              </div>
+            </form>
+    
+            <div class="useful-links">
+              <div class="fooetr-sec-heading">
+    
+    
+              </div>
+              <div class="footer-links">
+                <div>
+                  <div>
+                    <h3>USEFUL LINK</h3>
+                  </div>
+                  <div class="links">
+                    <div>
+                      <li><a href="/index.html">HOME</a></li>
+                      <li><a href="/about.html">ABOUT US</a></li>
+                      <!-- <li><a href="#">SERVICES</a></li> -->
+                      <li><a href="/shop.html">SHOP</a></li>
+                      <li><a href="/gallery.html">GALLERY</a></li>
+                    </div>
+                    <div>
+                      <!-- <li><a href="#">SELF HEALING</a></li> -->
+                      <li><a href="/reviews.html">REVIEWS</a></li>
+                      <li><a href="contact.html">CONTACT US</a></li>
+                    </div>
+    
+                  </div>
+    
+                </div>
+                <div>
+                  <div>
+                    <h3>USEFUL LINK</h3>
+                  </div>
+                  <div class="last-links">
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                    <!-- <li><a href="#">FAQ'S</a></li> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="bootm-div">
+            <p>© 2025 Design and Developed by the Vision Brands</p>
+          </div>
+        </div>
+        <div class="mobile-nav2">
+            <ul class="mobile-nav2-ul">
+        
+                <!-- item 7 -->
+                <li class="relative group li-icon">
+                    <a href="#"
+                        class="text-lg xl:text-15px 2xl:text-lg hover:text-secondary-color font-semibold whitespace-nowrap d-flex"><i class="fa-solid fa-location-dot"></i>
+                        Location</a>
+                </li>
+        
+                <!-- item 4 -->
+                <li class="relative group li-icon">
+                    <a href="#"
+                        class="text-lg xl:text-15px 2xl:text-lg hover:text-secondary-color font-semibold whitespace-nowrap d-flex"><i class="fa-regular fa-comments"></i>
+                        Live Chat</a>
+                </li>
+        
+                <!-- item 6 -->
+                <li class="relative group li-icon">
+                    <a href="#"
+                        class="text-lg xl:text-15px 2xl:text-lg hover:text-secondary-color font-semibold whitespace-nowrap d-flex whtsp"><img class="whatsApp-logo" src="./Assests/badge-img/ws-icon.png" alt="" width="50px">
+                        Ask US</a>
+                </li>
+        
+                <!-- item 8 -->
+                <li class="relative group li-icon">
+                    <a href="#"
+                        class="text-lg xl:text-15px 2xl:text-lg hover:text-secondary-color font-semibold whitespace-nowrap d-flex"><i class="fa-solid fa-phone-volume"></i>
+                        Call</a>
+                </li>
+        
+                <!-- item 5 -->
+                <li class="relative group li-icon">
+                    <a href="#"
+                        class="text-lg xl:text-15px 2xl:text-lg hover:text-secondary-color font-semibold whitespace-nowrap d-flex"><i class="fa-regular fa-address-book"></i>
+                        Book Now</a>
+                </li>
+            </ul>
+        </div>
+      </footer>
+    
+    
+      <script>
+    
+        document.addEventListener("DOMContentLoaded", function () {
+          function initContinuousCarousel(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            const sliderRow = carousel.querySelector(".slider-row");
+            const slides = Array.from(sliderRow.children);
+    
+            // Duplicate slides for continuous effect
+            slides.forEach((slide) => {
+              const clone = slide.cloneNode(true);
+              sliderRow.appendChild(clone);
+            });
+    
+            // Adjust the scroll speed by setting the animation duration
+            sliderRow.style.animationDuration = `${slides.length * 2}s`;
+          }
+    
+          // Initialize both carousels
+          initContinuousCarousel("carousel1");
+          initContinuousCarousel("carousel2");
+        });
+    
+        // document.querySelector('.benefits-para').addEventListener('click', function() {
+    
+        //     this.classList.toggle('open');
+        // });
+        document.querySelectorAll('.benefits-para').forEach(function (benefitPara) {
+          var hiddenPara = benefitPara.querySelector('.hidden-para');
+    
+          // Open by default
+          if (hiddenPara) {
+            hiddenPara.style.display = "block";
+            setTimeout(function () {
+              hiddenPara.style.height = "220px";
+              hiddenPara.style.opacity = "1";
+              hiddenPara.style.width = "468px";
+            }, 10);
+            benefitPara.classList.add('open');
+          }
+    
+          benefitPara.addEventListener('click', function () {
+            if (hiddenPara.style.display === "none" || hiddenPara.style.display === "") {
+              hiddenPara.style.display = "block";
+    
+              setTimeout(function () {
+                hiddenPara.style.height = "220px";
+                hiddenPara.style.opacity = "1";
+                hiddenPara.style.width = "468px";
+              }, 10);
+            } else {
+              hiddenPara.style.height = "0";
+              hiddenPara.style.opacity = "0";
+    
+              setTimeout(function () {
+                hiddenPara.style.display = "none";
+              }, 300);
+            }
+    
+            benefitPara.classList.toggle('open');
+          });
+        });
+    
+    
+        document.addEventListener('DOMContentLoaded', () => {
+          const items = document.querySelectorAll('.gallery-item');
+          const toggleButton = document.getElementById('toggle-view');
+          const initialVisibleItems = 8;
+          let allVisible = false;
+    
+    
+          const showItems = (count) => {
+            items.forEach((item, index) => {
+              item.style.display = index < count ? 'block' : 'none';
+            });
+          };
+    
+    
+          showItems(initialVisibleItems);
+    
+    
+          toggleButton.addEventListener('click', () => {
+            if (allVisible) {
+              // Show less
+              showItems(initialVisibleItems);
+              toggleButton.textContent = 'Load More';
+            } else {
+              // Show all
+              showItems(items.length);
+              toggleButton.textContent = 'Show Less';
+            }
+            allVisible = !allVisible;
+          });
+        });
+    
+        const images = [
+          './Assests/Mask group.png',
+          './Assests/car-2.png',
+          './Assests/car-3.png',
+          './Assests/car-4.png',
+          './Assests/car-5.png',
+          './Assests/car-6.png',
+          './Assests/car-7.png',
+          './Assests/car-8.png'
+        ];
+    
+        let currentIndex = 0;
+    
+        function openCarousel(index) {
+          currentIndex = index;
+          updateCarouselImages();
+          const modal = document.getElementById('carouselModal');
+          modal.style.display = 'flex';
+        }
+    
+        function closeCarousel() {
+          const modal = document.getElementById('carouselModal');
+          modal.style.display = 'none';
+        }
+    
+        function prevImage() {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          updateCarouselImages();
+        }
+    
+        function nextImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateCarouselImages();
+        }
+    
+        function updateCarouselImages() {
+          const imgElement = document.getElementById('carouselImage');
+          const imgElement2 = document.getElementById('carouselImage2');
+          const imgElement3 = document.getElementById('carouselImage3');
+    
+          imgElement.src = images[currentIndex];
+          imgElement2.src = images[(currentIndex - 1 + images.length) % images.length];
+          imgElement3.src = images[(currentIndex + 1) % images.length];
+        }
+        document.getElementById('carouselModal').addEventListener('click', function (event) {
+          const container = document.getElementById('carouselContainer');
+          if (!container.contains(event.target)) {
+            closeCarousel();
+          }
+        });
+    
+    
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     const benefitsPara = document.querySelectorAll('.benefits-para');
+    
+        //     benefitsPara.forEach(item => {
+        //         item.addEventListener('click', function() {
+        //             const hiddenPara = item.nextElementSibling; 
+        //             item.classList.toggle('active'); 
+    
+    
+        //             if (item.classList.contains('active')) {
+        //                 hiddenPara.style.display = 'block';
+        //             } else {
+        //                 hiddenPara.style.display = 'none';
+        //             }
+        //         });
+        //     });
+        // });
+    
+    
+        //     document.querySelectorAll('.benefits-para').forEach(function(element) {
+        //     element.querySelector('.hidden-con').addEventListener('click', function() {
+        //         element.classList.toggle('active');
+        //     });
+        // });
+    
+        document.addEventListener("DOMContentLoaded", function () {
+          const servicesDropdown = document.getElementById("services-dropdown");
+          const hiddenContentNav = document.getElementById("hidden-content-nav");
+          const navbarSupportedContent = document.getElementById("navbarSupportedContent");
+    
+          servicesDropdown.addEventListener("mouseenter", function () {
+            hiddenContentNav.classList.add("show");
+    
+          });
+    
+          servicesDropdown.addEventListener("mouseleave", function () {
+            hiddenContentNav.classList.remove("show");
+    
+          });
+    
+          hiddenContentNav.addEventListener("mouseenter", function () {
+            hiddenContentNav.classList.add("show");
+    
+          });
+    
+          hiddenContentNav.addEventListener("mouseleave", function () {
+            hiddenContentNav.classList.remove("show");
+    
+          });
+        });
+    
+      </script>
+    <script>
+      
+      $(window).on("load", function () {
+        setTimeout(function () {
+            $('.loader').fadeOut();
+            $('.loader-mask').fadeOut('slow');
+        }, 350); // Adjust this delay if needed
+    });
+    $(".navbar-toggler").click(function () {
+        let nav = $("#navbarSupportedContent");
+    
+        if (nav.css("display") === "none") {
+            nav.attr("style", "display: block !important;"); // Show
+        } else {
+            nav.attr("style", "display: none !important;"); // Hide
+        }
+    });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="	sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            var slider = $("#slider");
+            var thumb = $("#thumb");
+            var slidesPerPage = 4; //globaly define number of elements per page
+            var syncedSecondary = true;
+            slider.owlCarousel({
+                items: 1,
+                slideSpeed: 2000,
+                nav: false,
+                autoplay: false,
+                dots: false,
+                loop: true,
+                responsiveRefreshRate: 200
+            }).on('changed.owl.carousel', syncPosition);
+            thumb
+                .on('initialized.owl.carousel', function () {
+                    thumb.find(".owl-item").eq(0).addClass("current");
+                })
+                .owlCarousel({
+                    items: slidesPerPage,
+                    dots: false,
+                    nav: true,
+                    item: 4,
+                    smartSpeed: 200,
+                    slideSpeed: 500,
+                    slideBy: slidesPerPage,
+                    navText: ['<svg width="18px" height="18px" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="25px" height="25px" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+                    responsiveRefreshRate: 100
+                }).on('changed.owl.carousel', syncPosition2);
+            function syncPosition(el) {
+                var count = el.item.count - 1;
+                var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+                if (current < 0) {
+                    current = count;
+                }
+                if (current > count) {
+                    current = 0;
+                }
+                thumb
+                    .find(".owl-item")
+                    .removeClass("current")
+                    .eq(current)
+                    .addClass("current");
+                var onscreen = thumb.find('.owl-item.active').length - 1;
+                var start = thumb.find('.owl-item.active').first().index();
+                var end = thumb.find('.owl-item.active').last().index();
+                if (current > end) {
+                    thumb.data('owl.carousel').to(current, 100, true);
+                }
+                if (current < start) {
+                    thumb.data('owl.carousel').to(current - onscreen, 100, true);
+                }
+            }
+            function syncPosition2(el) {
+                if (syncedSecondary) {
+                    var number = el.item.index;
+                    slider.data('owl.carousel').to(number, 100, true);
+                }
+            }
+            thumb.on("click", ".owl-item", function (e) {
+                e.preventDefault();
+                var number = $(this).index();
+                slider.data('owl.carousel').to(number, 300, true);
+            });
+
+
+            $(".qtyminus").on("click", function () {
+                var now = $(".qty").val();
+                if ($.isNumeric(now)) {
+                    if (parseInt(now) - 1 > 0) { now--; }
+                    $(".qty").val(now);
+                }
+            })
+            $(".qtyplus").on("click", function () {
+                var now = $(".qty").val();
+                if ($.isNumeric(now)) {
+                    $(".qty").val(parseInt(now) + 1);
+                }
+            });
+        });
+    </script>
+<script src="/js/swiper.js"></script>
+
+</body>
+
+</html>
