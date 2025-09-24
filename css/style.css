@@ -518,6 +518,10 @@ a:hover{
     padding: 10rem 0;
 }
 
+.about-hero .slide-1{
+        padding: 4rem 0;
+}
+
 .hero-slider .slide-2 {
     background-image: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -592,16 +596,18 @@ a:hover{
 /* aboutSec */
 
     .colorSPAN{
-            color: #c7b361;
+            color: #c99027;
     }
 
     .aboutSec {
-        background-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 81%)), url(/Assests/music-images/white_bg2.jpg);
+        /* background-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 81%)), url(/Assests/music-images/white_bg2.jpg); */
         background-size: cover;
         color: white;
         padding: 5rem 0;
     }
-
+    .aboutSec .aboutContnet {
+        color: black;
+    }
     .aboutSec h2 {
         font-size: 60px;
         background: linear-gradient(30deg, #d3701e, #ffdc63);
@@ -703,13 +709,13 @@ textarea{
 } */
 
 .banner-sliders {
-    background-image: url("/Assests/badge-img/hero/slider-bg.jpg");
+    /* background-image: url("/Assests/badge-img/hero/slider-bg.jpg"); */
     background-size: cover;
     border-top: 4px solid #e51a23;
     border-bottom: 4px solid #e51a23;
 }
 .child-banner {
-    background-color: #000000bf;
+    background-color: #efefef;
     padding: 4rem 0;
 }
 .banner-sliders .swiper {
@@ -735,7 +741,7 @@ textarea{
   }
   .banner-sliders p{
         max-width: 800px;
-        color: white;
+        color: black;
         margin: 0 auto;
         text-align: center;
   }
@@ -2776,7 +2782,7 @@ font-weight: 600;
 .badgeSlider .project-card[active] {
     flex-basis: var(--open);
     transform: translateY(-4px);
-    box-shadow: 5px 18px 55px rgb(49, 49, 49);
+    box-shadow: 5px 18px 55px rgb(49 49 49 / 30%);
     border: 2px solid #c5a801;
 }
 
@@ -3110,8 +3116,8 @@ font-weight: 600;
 /* showcase */
 
         .showcase-section {
-  padding: 100px 20px;
-  background: #191919;
+    padding: 100px 20px;
+  background: #fff;
   position: relative;
   overflow: hidden;
 }
@@ -3153,7 +3159,7 @@ font-weight: 600;
 }
 
 .showcase-section .section-subtitle {
-  color: #9ca3af;
+    color: #000000;
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
@@ -3167,7 +3173,7 @@ font-weight: 600;
 
 .showcase-section .slider-container {
   position: relative;
-  background: rgba(17, 24, 39, 0.4);
+  background:#000;
   border-radius: 20px;
   padding: 30px;
   backdrop-filter: blur(10px);
@@ -3192,7 +3198,7 @@ font-weight: 600;
   object-fit: contain;
   border-radius: 15px;
   transition: all 0.5s ease;
-  background: rgba(0, 0, 0, 0.2);
+  background: #242526;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -3247,7 +3253,7 @@ font-weight: 600;
 
 .showcase-section .thumbnails-title {
   text-align: center;
-  color: #d1d5db;
+    color: #000000;
   margin-bottom: 30px;
   font-size: 1.1rem;
   font-weight: 500;
@@ -3475,7 +3481,7 @@ font-weight: 600;
 }
 
 .cases-section .case-card {
-    background: rgba(17, 24, 39, 0.6);
+    background: #191919;
     border-radius: 20px;
     padding: 25px;
     backdrop-filter: blur(10px);
@@ -6666,10 +6672,15 @@ footer {
     display: none;
     z-index: 1002;
 }
+.navbar-brand img {
+    width: 180px;
+    height: 60px;
+}
 
-@media (max-width: 1600px) {
+@media (max-width: 1500px) {
     .badgeSlider .slider {
         overflow: overlay;
+        padding: 20px 0;
     }
 }
 @media (max-width: 1400px) {
@@ -6758,7 +6769,8 @@ footer {
         font-size: 12px !important;
     }
     .navbar-brand img {
-        width: 130px;
+        width: 180px;
+        height: 60px;
     }
 }
 @media (max-width: 1270px) {
@@ -8203,6 +8215,7 @@ footer {
   @media (max-width: 1199px) {
         .navbar-brand img {
            width: 100px;
+            height: 40px;
         }
         .top_icons a {
             height: 30px;
@@ -8228,6 +8241,11 @@ footer {
         }
         .top-header {
             display: none;
+        }
+
+        .navbar-brand img {
+            width: 152px;
+            height: 56px;
         }
   }
 
@@ -8433,6 +8451,10 @@ footer {
                     right: 14px;
                     top: 40px;
                 }
+        .navbar-brand img {
+            width: 220px;
+            height: 62px;
+        }
     }
     @media (max-width: 388px) {
         .benefits-para {
