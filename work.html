@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" class="css">
+    <title>Work - Music Stand Banners</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(209, 209, 209, 0.466), rgba(196, 196, 196, 0.39)), url(/Assests/music-images/1.png);
+            background-size: cover;
+            background-position: right;
+        }
+
+        .about-hero {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("/Assests/music-images/7.jpg");
+            background-position: left;
+            background-size: cover;
+        }
+        .services-section .section-title {
+                background: linear-gradient(30deg, #d3701e, #ffdc63);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+        }
+        .Benefits-section,
+        .child-banner {
+            background: transparent;
+        }
+
+        .services-section {
+            padding: 0px 20px;
+        }
+    </style>
+
+
+
+    
+</head>
+
+<body>
+    <!-- header -->
+    <div id="navbar-container"></div>
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+    <!-- header -->
+
+    <section class=" about-hero">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-1">
+                        <div class="hero-subtext">
+                            <h2>OUR WORK</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="premiumSec py-5">
+      <div class="animated-background"></div>
+
+      <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+
+      <div class="container">
+        <div class="section-header">
+          <h1 class="section-title">Our Signature Collection</h1>
+          <div class="heding-image">
+            <div><img src="./Assests/red-line.png" alt="line">
+            </div>
+            <div><img src="./Assests/red-line.png" alt="line">
+            </div>
+            <div><img src="./Assests/red-line.png" alt="line">
+            </div>
+          </div>
+          <p class="section-subtitle">Discover premium badges, banners, and labels that define excellence and
+            distinction</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="product-card" data-category="badges">
+            <div class="image-container">
+              <img src="/Assests/music-images/fabric.avif" alt="Golden fringe trim" class="product-image">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="content-section">
+              <h2 class="card-title">Russia Mylar Braid</h2>
+              <div class="decorative-line"></div>
+              <p class="card-description">
+                This is our Russia Mylar braid, it is a thin braid and a great way to frame your banners' design.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="banners">
+            <div class="image-container">
+              <img src="/Assests/music-images/fabric2.avif" alt="Black braided trim" class="product-image">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="content-section">
+              <h2 class="card-title">No-Fringe Option</h2>
+              <div class="decorative-line"></div>
+              <p class="card-description">
+                This is our standard braid, the same design as our fringing. This is an option if you don't want any
+                fringing on your banners.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="labels">
+            <div class="image-container">
+              <img src="/Assests/music-images/fabric3.avif" alt="Cord braid trim" class="product-image">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="content-section">
+              <h2 class="card-title">Cord Braid</h2>
+              <div class="decorative-line"></div>
+              <p class="card-description">
+                This is our cord braid that we have in various colours, chunky and textured it makes a great statement
+                piece.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="services-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Artwork </h2>
+          <div class="heding-image">
+            <div><img src="./Assests/red-line.png" alt="line">
+            </div>
+            <div><img src="./Assests/red-line.png" alt="line">
+            </div>
+            <div><img src="./Assests/red-line.png" alt="line">
+            </div>
+          </div>
+          <p class="section-subtitle">Custom artwork crafted with precision and style.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card floating-element">
+            <div class="service-icon">
+              <lord-icon src="https://cdn.lordicon.com/czcsywgo.json" trigger="loop" delay="1500" state="in-reveal"
+                colors="primary:#5c460a,secondary:#916f10,tertiary:#c79816,quaternary:#eeca66,quinary:#5c460a,senary:#eeca66"
+                style="width:250px;height:250px">
+              </lord-icon>
+            </div>
+            <h3 class="service-title">Artwork Enhancement</h3>
+            <p class="service-description">
+              Our in-house designers can re-draw your low resolution images into superb high resolution artwork. We can
+              even develop an image from scratch using just your description or hand-drawn sketch.
+            </p>
+
+            <p class="service-description">
+              Your artwork can be blurred, uneven or poorly coloured, yet we can quickly and efficiently enhance it to
+              ensure your brand and logo meets the quality standards you desire.
+            </p>
+
+            <h4 style="color: #ecad45; margin-bottom: 15px; font-weight: 600;">Vector Image Benefits:</h4>
+            <ul class="benefits-list">
+              <li>Print at any resolution without quality loss</li>
+              <li>Scale up and down infinitely while maintaining sharpness</li>
+              <li>Quickly change colors without affecting quality</li>
+            </ul>
+
+            <!--<div style="margin-top: 25px;">
+              <p style="color: #9ca3af; margin-bottom: 15px; font-weight: 600;">Accepted Formats:</p>
+              <div class="file-formats">
+                <span class="format-tag">JPEG</span>
+                <span class="format-tag">PNG</span>
+                <span class="format-tag">PDF</span>
+                <span class="format-tag">EPS</span>
+                <span class="format-tag">AI</span>
+                <span class="format-tag">PSD</span>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="service-card floating-element">
+            <div class="service-icon">
+              <lord-icon src="https://cdn.lordicon.com/edplgash.json" trigger="loop" delay="1500" state="in-dynamic"
+                colors="primary:#e8b730,secondary:#5c460a,tertiary:#5c460a" style="width:250px;height:250px">
+              </lord-icon>
+            </div>
+            <h3 class="service-title">Embroidery Digitizing</h3>
+            <p class="service-description">
+              Whatever your logo, we can create it as an embroidery. All we require is a good standard piece of artwork
+              to work from.
+            </p>
+
+            <div
+              style="background: rgb(125 89 23 / 30%); background: rgb(125 89 23 / 30%); border-radius: 10px; padding: 20px; margin: 20px 0;">
+              <p style="color: rgb(241 183 72); font-weight: 600; margin-bottom: 8px;">Important Note:</p>
+              <p style="color: #ffffff; font-size: 0.95rem;">
+                With embroidery we create logos with physical properties (thread). The smaller the logo, the less clear
+                fine details or text will appear.
+              </p>
+            </div>
+
+            <!-- <div style="margin-top: 25px;">
+              <p style="color: #9ca3af; margin-bottom: 15px; font-weight: 600;">Accepted Formats:</p>
+              <div class="file-formats">
+                <span class="format-tag">JPEG</span>
+                <span class="format-tag">PNG</span>
+                <span class="format-tag">PDF</span>
+                <span class="format-tag">EPS</span>
+                <span class="format-tag">PSD</span>
+                <span class="format-tag">AI</span>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="cost-notice">
+          <div class="cost-notice-title">💡 Cost-Effective Tip</div>
+          <div class="cost-notice-text">
+            The better the artwork quality you provide, the lower the cost. More work involved in reaching your desired
+            standard means higher costs.
+            <div class="cost-notice_btn">
+              <a href="/Assests/MSB Maby Legal 2016.pdf" target="_blank">For legal information </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="optional pb-5">
+      <div class="container">
+        <div class="heading-container" data-aos="flip-down">
+          <h1>Optional Extras</h1>
+          <div class="heding-image">
+            <div><img src="./Assests/red-line.png" alt="line">
+            </div>
+            <div><img src="./Assests/red-line.png" alt="line">
+            </div>
+            <div><img src="./Assests/red-line.png" alt="line">
+            </div>
+          </div>
+          <p class="optional_topP">We offer various optional extras that you can apply to your banner to make yours
+            unique.
+            These come at an extra cost to the banners, costs to be advised during your enquiry.</p>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper_2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/optional.avif" alt="">
+                </div>
+                <h3> Magnetic Strip</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/optional2.avif" alt="">
+                </div>
+                <h3>Board Filling</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/optional3.avif" alt="">
+                </div>
+                <h3>Large Sized Banner</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/optional4.avif" alt="">
+                </div>
+                <h3>Waterproofing</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/optional5.avif" alt="">
+                </div>
+                <h3>Extended Envelope</h3>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination d-none"></div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper_3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/option.avif" alt="">
+                </div>
+                <h3> Tassels </h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/option2.avif" alt="">
+                </div>
+                <h3>Wooden Dowel</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/option3.avif" alt="">
+                </div>
+                <h3>Braid</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/option4.avif" alt="">
+                </div>
+                <h3>Velcro</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="optional_parent">
+                <div class="optional_slide">
+                  <img src="/Assests/music-images/option5.avif" alt="" style="border-radius: 50%;">
+                </div>
+                <h3>Elastic Band</h3>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination d-none"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="footer-container"></div>
+    <script>
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper_2", {
+      slidesPerView: 4,
+      loop: true,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3000,
+        reverseDirection: false, // normal left
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        476: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        991: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+
+
+    var swiper = new Swiper(".mySwiper_3", {
+      slidesPerView: 4,
+      loop: true,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3000,
+        reverseDirection: true, // reversed direction
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        476: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        991: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+    </script>
+
+</body>
+
+</html>

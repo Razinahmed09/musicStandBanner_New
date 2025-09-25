@@ -13,314 +13,17 @@
     <title>About Us - Music Stand Banners</title>
     <style>
        
-       
-        .shield-logo {
-            width: 200px;
-            height: auto;
-            filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.3));
-            transition: transform 0.3s ease;
+        body {
+             background-image: linear-gradient(rgba(209, 209, 209, 0.466), rgba(196, 196, 196, 0.39)), url(/Assests/music-images/1.png);
+             background-size: cover;
+           background-position: right;
         }
-
-        .shield-logo:hover {
-            transform: scale(1.05);
-        }
-
-        .premium-badge {
-            width: 150px;
-            height: auto;
-            filter: drop-shadow(0 5px 15px rgba(184, 134, 11, 0.4));
-        }
-
-        .main-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #B8860B;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            letter-spacing: -1px;
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: #666;
-            font-weight: 400;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .aboutSec {
-            background-image: linear-gradient(rgba(209, 209, 209, 0.466), rgba(196, 196, 196, 0.39)), url(/Assests/music-images/1.png);
+        .about-hero {
+            background-image: 
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("/Assests/music-images/10.jpg");
+            background-position: left;
             background-size: cover;
-            background-position: center;
-            padding: 80px 0;
-        }
-
-        .aboutSection {
-           background-image: linear-gradient(rgba(209, 209, 209, 0.466), rgba(196, 196, 196, 0.39)), url(/Assests/music-images/2.png);
-           background-size: cover;
-           background-position: center;
-           padding: 80px 0;
-        }
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .content-card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #D4AF37, #B8860B);
-        }
-
-        .content-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
-        }
-
-        .card-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #D4AF37, #B8860B);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 25px;
-            font-size: 24px;
-            color: white;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #B8860B;
-            margin-bottom: 15px;
-        }
-
-        .card-text {
-            color: #555;
-            line-height: 1.8;
-            font-size: 1rem;
-        }
-
-        .stats-section {
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-            border-radius: 25px;
-            padding: 60px 40px;
-            margin: 60px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stats-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23D4AF37" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="%23D4AF37" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23D4AF37" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>') repeat;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .stat-item {
-            color: white;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #D4AF37;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #ccc;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .values-section {
-            text-align: center;
-            margin: 80px 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: #B8860B;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 50px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .value-item {
-            background: white;
-            border-radius: 15px;
-            padding: 30px 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .value-item:hover {
-            border-color: #D4AF37;
-            transform: translateY(-5px);
-        }
-
-        .value-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .value-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .value-text {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #D4AF37, #B8860B);
-            border-radius: 25px;
-            padding: 60px 40px;
-            text-align: center;
-            color: white;
-            margin-top: 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-title {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .cta-text {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #B8860B;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            color: #8B6914;
-        }
-
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5rem;
-            }
-
-            .logo-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .shield-logo {
-                width: 150px;
-            }
-
-            .content-card {
-                padding: 30px 20px;
-            }
-
-            .stats-section,
-            .cta-section {
-                padding: 40px 20px;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
         }
     </style>
 </head>
@@ -338,7 +41,7 @@
     </script>
     <!-- header -->
 
-    <section class="hero-slider about-hero">
+    <section class="about-hero">
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -354,7 +57,7 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
-  </section>
+    </section>
 
     <!-- aboutSec -->
     <section class="aboutSec" id="about">
@@ -397,7 +100,16 @@
 
             <div class="content-grid">
                 <div class="content-card">
-                    <div class="card-icon">🏭</div>
+                    <div class="card-icon">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/qrukulrb.json"
+                            trigger="loop"
+                            delay="1500"
+                            state="in-reveal"
+                            colors="primary:#ffffff,secondary:#ffffff,tertiary:#f4dc9c,quaternary:#faefd1"
+                            >
+                        </lord-icon>
+                    </div>
                     <h3 class="card-title">Our Manufacturing Excellence</h3>
                     <p class="card-text">We are manufacturers of high quality music stand banners based in Bristol, UK.
                         Every process in making our banners involves precision, skill and care to construct a music
@@ -405,7 +117,14 @@
                 </div>
 
                 <div class="content-card">
-                    <div class="card-icon">🌍</div>
+                    <div class="card-icon">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/tyntlpjn.json"
+                            trigger="loop"
+                            delay="2000"
+                            colors="primary:#5c460a,secondary:#faefd1">
+                        </lord-icon>
+                    </div>
                     <h3 class="card-title">Global Reach, Local Care</h3>
                     <p class="card-text">We supply music stand banners for bandstand display to all types of bands and
                         choirs, from Symphony orchestras, through to individuals and not only in the UK but worldwide.
@@ -413,7 +132,14 @@
                 </div>
 
                 <div class="content-card">
-                    <div class="card-icon">🎨</div>
+                    <div class="card-icon">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/veoztjjj.json"
+                            trigger="loop"
+                            delay="2000"
+                            colors="primary:#faefd1,secondary:#5c460a">
+                        </lord-icon>
+                    </div>
                     <h3 class="card-title">Bespoke Design Process</h3>
                     <p class="card-text">Each banner is designed, embroidered and manufactured in our Bristol based
                         factory. Our skilled artisans combine traditional craftsmanship with modern techniques to create
@@ -421,7 +147,16 @@
                 </div>
 
                 <div class="content-card">
-                    <div class="card-icon">🤝</div>
+                    <div class="card-icon">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/nhekwutf.json"
+                            trigger="loop"
+                            delay="1500"
+                            state="in-reveal"
+                            colors="primary:#5c460a,secondary:#faefd1,tertiary:#faefd1,quaternary:#ffffff,quinary:#f4dc9c"
+                            >
+                        </lord-icon>
+                    </div>
                     <h3 class="card-title">Customer-First Approach</h3>
                     <p class="card-text">We back up our quality with fast and efficient customer service delivered by
                         our friendly and professional team. With no minimum quantity orders, we welcome all enquiries
@@ -457,28 +192,62 @@
 
                 <div class="values-grid">
                     <div class="value-item">
-                        <div class="value-icon">⚡</div>
+                        <div class="value-icon">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/uihwbzln.json"
+                            trigger="loop"
+                            delay="1500"
+                            state="in-dynamic"
+                            colors="primary:#5c460a,secondary:#faefd1,tertiary:#ebe6ef">
+                        </lord-icon>
+                        </div>
                         <h3 class="value-title">Quality Craftsmanship</h3>
                         <p class="value-text">Every thread, every stitch, every detail is executed with meticulous
                             attention to ensure lasting beauty and durability.</p>
                     </div>
 
                     <div class="value-item">
-                        <div class="value-icon">🎯</div>
+                        <div class="value-icon">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/yseqjcer.json"
+                                trigger="loop"
+                                delay="1500"
+                                state="in-reveal"
+                                colors="primary:#5c460a,secondary:#f4dc9c,tertiary:#faefd1"
+                                >
+                            </lord-icon>
+                        </div>
                         <h3 class="value-title">Precision & Care</h3>
                         <p class="value-text">From initial design concepts to final production, we maintain the highest
                             standards of precision in every step.</p>
                     </div>
 
                     <div class="value-item">
-                        <div class="value-icon">💝</div>
+                        <div class="value-icon">
+                             <lord-icon
+                                src="https://cdn.lordicon.com/ewmfucya.json"
+                                trigger="loop"
+                                delay="1000"
+                                state="morph-glitter"
+                                colors="primary:#5c460a,secondary:#f4dc9c,tertiary:#faefd1,quaternary:#f9c9c0,quinary:#ffffff,senary:#ebe6ef">
+                            </lord-icon>
+                        </div>
                         <h3 class="value-title">Personal Service</h3>
                         <p class="value-text">We believe in building lasting relationships with our customers through
                             genuine care and professional excellence.</p>
                     </div>
 
                     <div class="value-item">
-                        <div class="value-icon">🚀</div>
+                        <div class="value-icon">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ceaxohpl.json"
+                                trigger="loop"
+                                delay="1500"
+                                state="in-reveal"
+                                colors="primary:#5c460a,secondary:#f4dc9c"
+                                >
+                            </lord-icon>
+                        </div>
                         <h3 class="value-title">Innovation</h3>
                         <p class="value-text">Combining time-honored techniques with modern innovation to create banners
                             that stand the test of time.</p>
@@ -507,6 +276,7 @@
         document.getElementById('footer-container').innerHTML = data;
       });
     </script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
 
 </html>
