@@ -186,15 +186,15 @@
                 <a class="nav-link" href="work.html" tabindex="-1" aria-disabled="true">Works</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#cases" tabindex="-1" aria-disabled="true">Cases</a>
+                <a class="nav-link" href="cases.html" tabindex="-1" aria-disabled="true">Cases</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="#FEEDBACK" id="navbarDropdown" aria-expanded="true">
+                <a class="nav-link" href="feedback.html" id="navbarDropdown" aria-expanded="true">
                   Feedbacks
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">Contact Us</a>
+                <a class="nav-link" href="contactUs.html" tabindex="-1" aria-disabled="true">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -229,3 +229,17 @@
     </nav>
     </div>
   </header>
+
+
+  <script>
+
+    $(".navbar-toggler").click(function () {
+      let nav = $("#navbarSupportedContent");
+
+      if (nav.css("display") === "none") {
+        nav.attr("style", "display: block !important;"); // Show
+      } else {
+        nav.attr("style", "display: none !important;"); // Hide
+      }
+    });
+  </script>

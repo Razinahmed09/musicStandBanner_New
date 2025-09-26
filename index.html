@@ -305,7 +305,7 @@
           </div>
           <div class="benefits-row pt-5" data-aos="flip-left">
             <div class="banefits-image">
-              <img src="./Assests/music-images/Appliqué.png" alt="Car-Image">
+              <img src="/Assests/music-images/Appliqué.png" alt="Car-Image">
             </div>
             <div class="para-set">
               <div class="benefits-para">
@@ -2405,30 +2405,29 @@
     // });
 
     document.addEventListener("DOMContentLoaded", function () {
-      const servicesDropdown = document.getElementById("services-dropdown");
-      const hiddenContentNav = document.getElementById("hidden-content-nav");
-      const navbarSupportedContent = document.getElementById("navbarSupportedContent");
+  const servicesDropdown = document.getElementById("services-dropdown");
+  const hiddenContentNav = document.getElementById("hidden-content-nav");
 
-      servicesDropdown.addEventListener("mouseenter", function () {
-        hiddenContentNav.classList.add("show");
-
-      });
-
-      servicesDropdown.addEventListener("mouseleave", function () {
-        hiddenContentNav.classList.remove("show");
-
-      });
-
-      hiddenContentNav.addEventListener("mouseenter", function () {
-        hiddenContentNav.classList.add("show");
-
-      });
-
-      hiddenContentNav.addEventListener("mouseleave", function () {
-        hiddenContentNav.classList.remove("show");
-
-      });
+  if (servicesDropdown && hiddenContentNav) {
+    // Show on hover
+    servicesDropdown.addEventListener("mouseenter", function () {
+      hiddenContentNav.classList.add("show");
     });
+
+    servicesDropdown.addEventListener("mouseleave", function () {
+      hiddenContentNav.classList.remove("show");
+    });
+
+    // Keep visible when hovering hidden content
+    hiddenContentNav.addEventListener("mouseenter", function () {
+      hiddenContentNav.classList.add("show");
+    });
+
+    hiddenContentNav.addEventListener("mouseleave", function () {
+      hiddenContentNav.classList.remove("show");
+    });
+  }
+});
 
   </script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -2441,15 +2440,7 @@
         $('.loader-mask').fadeOut('slow');
       }, 350); // Adjust this delay if needed
     });
-    $(".navbar-toggler").click(function () {
-      let nav = $("#navbarSupportedContent");
-
-      if (nav.css("display") === "none") {
-        nav.attr("style", "display: block !important;"); // Show
-      } else {
-        nav.attr("style", "display: none !important;"); // Hide
-      }
-    });
+    
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>

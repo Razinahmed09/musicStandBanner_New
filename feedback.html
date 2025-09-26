@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" class="css">
+    <title>Feedback - Music Stand Banners</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(209, 209, 209, 0.466), rgba(196, 196, 196, 0.39)), url(/Assests/music-images/1.png);
+            background-size: cover;
+            background-position: right;
+        }
+
+        .about-hero {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("/Assests/music-images/4.jpg");
+            background-position: left;
+            background-size: cover;
+        }
+
+        .services-section .section-title {
+            background: linear-gradient(30deg, #d3701e, #ffdc63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .Benefits-section,
+        .child-banner {
+            background: transparent;
+        }
+
+        .services-section {
+            padding: 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="navbar-container"></div>
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+    <!-- header -->
+
+    <section class="about-hero">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-1">
+                        <div class="hero-subtext">
+                            <h2>FEEDBACK</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <section class="clients-reviews">
+        <div class="client-child">
+            <div class="heading-container aos-init aos-animate" data-aos="flip-down" id="FEEDBACK">
+                <h1>FEEDBACK</h1>
+                <div class="heding-image">
+                    <div><img src="./Assests/red-line.png" alt="line">
+                    </div>
+                    <div><img src="./Assests/red-line.png" alt="line">
+                    </div>
+                    <div><img src="./Assests/red-line.png" alt="line">
+                    </div>
+                </div>
+            </div>
+            <div class="reviews">
+                <div class="reveiws-con d-none">
+                    <div>
+                        <div class="google-con">
+                            <div>
+                                <img src="./Assests/google logo 1.png" alt="">
+                            </div>
+                            <div>
+                                <p>Reviews</p>
+                            </div>
+                        </div>
+                        <div class="rating-con">
+                            <div>
+                                <h1>5.0</h1>
+                            </div>
+                            <div>
+                                <div>
+                                    <img src="./Assests/Star logo.png" alt="star">
+                                    <img src="./Assests/Star logo.png" alt="star">
+                                    <img src="./Assests/Star logo.png" alt="star">
+                                    <img src="./Assests/Star logo.png" alt="star">
+                                    <img src="./Assests/Star logo.png" alt="star">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-btn">
+                        <a target="_blank" href="https://g.co/kgs/MVALzPd">Review us on Google</a>
+                    </div>
+                </div>
+
+                <div class="reviews-gallery">
+                    <div class="gallery-item aos-init" data-aos="flip-down" style="display: block;">
+                        <div class="garllery-con">
+                            <div class="review-image-con">
+                                <div>
+                                    <img src="https://badgedesign.thevisionbrands.com/storage/images/testimonials/6SM4Cpv8GQGS0U3SRf7K3FQk9HY0bE3XxVfH8fon.jpg"
+                                        alt="person">
+                                </div>
+                                <div>
+                                    <div>
+                                        <h1>D. Rasmussen, New Hampshire, USA</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="start-con">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                            </div>
+                            <div class="reveiws-para paraScroll">
+                                <p>The banner has arrived this morning. They fit my Manhasset stand perfectly and the
+                                    quality of
+                                    tailoring appears to be of equal high calibre. Thanks so much for your quick
+                                    response and on-time
+                                    delivery. When I gave you my credit card number, I, felt that I had taken somewhat
+                                    of a risk doing
+                                    business with a small, unknown (to me) company in another country. However, you
+                                    delivered on all
+                                    commitments you made. I would be happy to serve as a reference for your business if
+                                    you want to expand
+                                    into the US market. Again, thanks very much.</p>
+                            </div>
+                            <!-- <div class="reveiw-icon">
+
+                <img src="./Assests/google logo 1.png" alt="">
+
+              </div> -->
+                        </div>
+                    </div>
+                    <div class="gallery-item aos-init" data-aos="flip-down" style="display: block;">
+                        <div class="garllery-con">
+                            <div class="review-image-con">
+                                <div>
+                                    <img src="https://badgedesign.thevisionbrands.com/storage/images/testimonials/D5RDrQoh2wqOsezNdT5jnBQkB2YvQjZcMvQbYAAy.jpg"
+                                        alt="person">
+                                </div>
+                                <div>
+                                    <div>
+                                        <h1>J. Chamberlain, Aberystwyth</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="start-con">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                            </div>
+                            <div class="reveiws-para">
+                                <p>Hi, AMAZING, STUPENDOUS, WONDERFUL. Thanks</p>
+                            </div>
+                            <!-- <div class="reveiw-icon">
+
+                <img src="./Assests/google logo 1.png" alt="">
+
+              </div> -->
+                        </div>
+                    </div>
+                    <div class="gallery-item aos-init" data-aos="flip-down" style="display: block;">
+                        <div class="garllery-con">
+                            <div class="review-image-con">
+                                <div>
+                                    <img src="https://badgedesign.thevisionbrands.com/storage/images/testimonials/4G4VMLsSQ2JbwiwLldeQyw7AGUHblstBC2op2JlR.jpg"
+                                        alt="person">
+                                </div>
+                                <div>
+                                    <div>
+                                        <h1>Dunblane Cathedral Handbell Ringers, Scotland</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="start-con">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                            </div>
+                            <div class="reveiws-para paraScroll">
+                                <p>The falls have arrived safely and are looking superb. I haven't seen them on the
+                                    stands yet, as they
+                                    are in the bell store but tried one on my own music stand and was very pleased with
+                                    the appearance.
+                                    Thank you once again for your efforts which have been much appreciated.</p>
+                            </div>
+                            <!-- <div class="reveiw-icon">
+
+                <img src="./Assests/google logo 1.png" alt="">
+
+              </div> -->
+                        </div>
+                    </div>
+                    <div class="gallery-item aos-init" data-aos="flip-down" style="display: block;">
+                        <div class="garllery-con">
+                            <div class="review-image-con">
+                                <div>
+                                    <img src="https://badgedesign.thevisionbrands.com/storage/images/testimonials/BZd0SD8a5q0489oCKz4qGobRjPU4fXnCQEkOJMyv.jpg"
+                                        alt="person">
+                                </div>
+                                <div>
+                                    <div>
+                                        <h1>Paul, Surlingham</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="start-con">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                                <img src="./Assests/Star logo.png" alt="star">
+                            </div>
+                            <div class="reveiws-para">
+                                <p>Just wanted to let you know that the stand banners arrived yesterday and
+                                    we’re delighted with them.
+                                    Thanks for all your hard work and you infinite patience.Very best wishes</p>
+                            </div>
+                            <!-- <div class="reveiw-icon">
+
+                <img src="./Assests/google logo 1.png" alt="">
+
+              </div> -->
+                        </div>
+                    </div>
+                    <!-- <div class="gallery-item aos-init" data-aos="flip-down" style="display: block;">
+            <div class="garllery-con">
+              <div class="review-image-con">
+                <div>
+                  <img
+                    src="https://badgedesign.thevisionbrands.com/storage/images/testimonials/NzOYi55DFG4mHwHw31IiE4OPm2mwJmZsqK1gu6Sg.jpg"
+                    alt="person">
+                </div>
+                <div>
+                  <div>
+                    <h1>Colin Lewis</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="start-con">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+              </div>
+              <div class="reveiws-para">
+                <p>The treble clef banners arrived yesterday and I have to say they are stunning! Very many thanks for
+                  such a great job and in good time for our gig at the weekend</p>
+              </div>
+              <div class="reveiw-icon">
+
+                <img src="./Assests/google logo 1.png" alt="">
+
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item aos-init" data-aos="flip-down" style="display: block;">
+            <div class="garllery-con">
+              <div class="review-image-con">
+                <div>
+                  <img
+                    src="https://badgedesign.thevisionbrands.com/storage/images/testimonials/Z8iXdyeN4K5zOkSoTrg4z4Cy22mxoVqEQgEVbY5a.jpg"
+                    alt="person">
+                </div>
+                <div>
+                  <div>
+                    <h1>Shonnag, Bristol</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="start-con">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+              </div>
+              <div class="reveiws-para">
+                <p>Thank you for getting my shirts ready in time for Roag's Babes qualifying heat. Absolutely thrilled
+                  with them and pleased to inform you that we were awarded 1st place yesterday. Thank you again for your
+                  super customer service!</p>
+              </div>
+              <div class="reveiw-icon">
+
+                <img src="./Assests/google logo 1.png" alt="">
+
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item aos-init" data-aos="flip-down" style="display: block;">
+            <div class="garllery-con">
+              <div class="review-image-con">
+                <div>
+                  <img
+                    src="https://badgedesign.thevisionbrands.com/storage/images/testimonials/Tg2ni9HfX0zz911TjVWJc4lQMRpBYP0cM85rUCjV.jpg"
+                    alt="person">
+                </div>
+                <div>
+                  <div>
+                    <h1>Phil</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="start-con">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+              </div>
+              <div class="reveiws-para">
+                <p>I don't know if you recall but you did the Valleys 100 badges for us not that long ago, they were a
+                  great hit and I received nothing but praise for the quality...so I pass that on to you.</p>
+              </div>
+              <div class="reveiw-icon">
+
+                <img src="./Assests/google logo 1.png" alt="">
+
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item aos-init" data-aos="flip-down" style="display: block;">
+            <div class="garllery-con">
+              <div class="review-image-con">
+                <div>
+                  <img
+                    src="https://badgedesign.thevisionbrands.com/storage/images/testimonials/4ieIRg6aEXwk4hH3tZpu238YX29joj7tQyW6IaI1.jpg"
+                    alt="person">
+                </div>
+                <div>
+                  <div>
+                    <h1>Carl, Birmingham</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="start-con">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+                <img src="./Assests/Star logo.png" alt="star">
+              </div>
+              <div class="reveiws-para">
+                <p>Received that badges this morning. Love them. Really appreciate all your help and assistance with
+                  everything. Service was exceptional! Advice was spot on in guiding me to what type of badge finish I
+                  should go for and the end products turned out beyond my expectations. 5 stars!</p>
+              </div>
+              <div class="reveiw-icon">
+
+                <img src="./Assests/google logo 1.png" alt="">
+
+              </div>
+            </div>
+          </div> -->
+                </div>
+                <!-- <button id="toggle-view">Load More</button> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Choose Us Section -->
+    <section class="feedbackService">
+        <section class="section">
+            <div class="floating-elements"></div>
+            <div class="container">
+                <div class="heading-container aos-init aos-animate pb-5" data-aos="flip-down" id="FEEDBACK">
+                    <h1>Why Choose Us</h1>
+                    <div class="heding-image">
+                        <div><img src="./Assests/red-line.png" alt="line">
+                        </div>
+                        <div><img src="./Assests/red-line.png" alt="line">
+                        </div>
+                        <div><img src="./Assests/red-line.png" alt="line">
+                        </div>
+                    </div>
+                </div>
+                <div class="section-underline"></div>
+                <div class="features-grid">
+
+
+                    <div class="feature-card" data-delay="1">
+                        <div class="feature-icon">
+                            <lord-icon src="https://cdn.lordicon.com/ciwxnydt.json" trigger="loop" delay="1500"
+                                state="in-reaveal" colors="primary:#5c460a,secondary:#ffffff">
+                            </lord-icon>
+                        </div>
+                        <h3 class="feature-title">Trusted Expertise</h3>
+                        <p class="feature-description">With decades of industry experience, our team of specialists
+                            provides expert guidance and solutions tailored to your specific needs.</p>
+                    </div>
+
+
+
+                    <div class="feature-card" data-delay="3">
+                        <div class="feature-icon">
+                            <lord-icon src="https://cdn.lordicon.com/yseqjcer.json" trigger="loop" delay="1500"
+                                state="in-unfold" colors="primary:#5c460a,secondary:#eeca66,tertiary:#ffffff">
+                            </lord-icon>
+                        </div>
+                        <h3 class="feature-title">Secure & Reliable</h3>
+                        <p class="feature-description">Your data and transactions are protected with enterprise-grade
+                            security. We guarantee the safety and privacy of all customer information.</p>
+                    </div>
+                    <div class="feature-card" data-delay="5">
+                        <div class="feature-icon">
+                            <lord-icon src="https://cdn.lordicon.com/xvmmqwjv.json" trigger="loop" delay="1500"
+                                state="in-reveal"
+                                colors="primary:#5c460a,secondary:#f4dc9c,tertiary:#5c460a,quaternary:#eeca66,quinary:#ffffff">
+                            </lord-icon>
+                        </div>
+                        <h3 class="feature-title">24/7 Support</h3>
+                        <p class="feature-description">Our dedicated support team is available around the clock to
+                            assist you with any questions, concerns, or technical support you may need.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div id="footer-container"></div>
+    <script>
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script>
+        // Enhanced Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const cards = entry.target.querySelectorAll('.feedback-card, .feature-card');
+                    cards.forEach((card, index) => {
+                        const delay = parseInt(card.dataset.delay) || 0;
+                        setTimeout(() => {
+                            card.classList.add('animate');
+                        }, delay * 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Enhanced hover effects for feedback cards
+        document.querySelectorAll('.feedback-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const stars = card.querySelectorAll('.star');
+                stars.forEach((star, index) => {
+                    setTimeout(() => {
+                        star.style.transform = 'scale(1.3) rotate(20deg)';
+                    }, index * 50);
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                const stars = card.querySelectorAll('.star');
+                stars.forEach(star => {
+                    star.style.transform = 'scale(1) rotate(0deg)';
+                });
+            });
+        });
+
+        // Advanced 3D tilt effect for feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+
+                const mouseX = e.clientX - centerX;
+                const mouseY = e.clientY - centerY;
+
+                const rotateX = (mouseY / rect.height) * -15;
+                const rotateY = (mouseX / rect.width) * 15;
+
+                card.style.transform = `translateY(-15px) scale(1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1) rotateX(0deg) rotateY(0deg)';
+            });
+        });
+
+        // Staggered star animation on page load
+        setTimeout(() => {
+            document.querySelectorAll('.star').forEach((star, index) => {
+                setTimeout(() => {
+                    star.style.animation = `starPulse 0.6s ease-out`;
+                }, index * 100);
+            });
+        }, 2000);
+
+        // Add star pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes starPulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.3); filter: drop-shadow(0 0 10px #d4941e); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Smooth scroll reveal effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.floating-elements::before, .floating-elements::after');
+
+            parallaxElements.forEach(element => {
+                const speed = 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    </script>
+</body>
+
+</html>
